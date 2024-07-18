@@ -1,9 +1,9 @@
 #include "defines.h"
 
-char calcDigit(signed char value, char digit) {
+char calcDigit(signed char value, char dozen) {
     char d = (char)value / 10;
     char u = (char)value - d * 10;
-    return score.digit == digit ? d : u;
+    return score.digit == dozen ? d : u;
 }
 
 char getNumber() {
@@ -18,8 +18,11 @@ void updateDisplay(void) {
     if (tmDISPLAY) return;
     tmDISPLAY = TIME_5ms;
 
-    if (++score.digit > 5) score.digit = 0;
-
-    PORTB = NUMBERS[getNumber()];
-    PORTC = DIGITS[score.digit];
+    if (++score.digit > 5) score.digit = 0;    
+    
+    char number = NUMBERS[getNumber()];    
+    char digit = DIGITS[score.digit];
+    
+    PORTC = digit;
+    PORTB = number;
 }

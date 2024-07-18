@@ -1410,10 +1410,10 @@ volatile unsigned int timers[2];
 # 1 "display.c" 2
 
 
-char calcDigit(signed char value, char digit) {
+char calcDigit(signed char value, char dozen) {
     char d = (char)value / 10;
     char u = (char)value - d * 10;
-    return score.digit == digit ? d : u;
+    return score.digit == dozen ? d : u;
 }
 
 char getNumber() {
@@ -1426,10 +1426,13 @@ char getNumber() {
 
 void updateDisplay(void) {
     if (timers[0]) return;
-    timers[0] = 100;
+    timers[0] = 500;
 
     if (++score.digit > 5) score.digit = 0;
 
-    PORTB = NUMBERS[getNumber()];
-    PORTC = DIGITS[score.digit];
+    char number = NUMBERS[getNumber()];
+    char digit = DIGITS[score.digit];
+
+    PORTC = digit;
+    PORTB = number;
 }

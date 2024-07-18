@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.46\pic\dat\20240104201356_en.msgs \
   -cn -h+dist/default/production\score.X.production.sym \
   --cmf=dist/default/production\score.X.production.cmf -z -Q16F870 \
-  -oC:\Users\israel\AppData\Local\Temp\xcBsjb8.1\driver_tmp_3.o \
+  -oC:\Users\israel\AppData\Local\Temp\xcCsho4.2\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/score.X.production.map \
-  --md=C:\Users\israel\AppData\Local\Temp\xcBsjb8.1\driver_tmp_0.dat -E1 \
+  --md=C:\Users\israel\AppData\Local\Temp\xcCsho4.2\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
   -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0BFh \
@@ -20,7 +20,7 @@ Linker command line:
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\israel\AppData\Local\Temp\xcBsjb8.1\driver_tmp_12.o \
+  C:\Users\israel\AppData\Local\Temp\xcCsho4.2\driver_tmp_12.o \
   dist/default/production\score.X.production.o 
 
 Object code version is 3.11
@@ -30,7 +30,7 @@ Machine type is 16F870
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\israel\AppData\Local\Temp\xcBsjb8.1\driver_tmp_12.o
+C:\Users\israel\AppData\Local\Temp\xcCsho4.2\driver_tmp_12.o
                 end_init                              A        A        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             2007     2007        1        0       4
@@ -40,26 +40,26 @@ dist/default/production\score.X.production.o
                 intentry                              4        4        6        8       0
                 config                             2007     2007        1        0       4
                 text15                              113      113       2A       4A       0
-                text14                              166      166       28       4A       0
-                text13                              258      258       10      440       0
-                text12                              248      248       10      440       0
-                text11                              274      274        C      440       0
-                text10                              268      268        C      440       0
-                text9                               1F2      1F2       18       4A       0
-                text8                               18E      18E       27       4A       0
+                text14                              18F      18F       28       4A       0
+                text13                              25C      25C       10      448       0
+                text12                              24C      24C       10      448       0
+                text11                              278      278        C      448       0
+                text10                              26C      26C        C      448       0
+                text9                               1F6      1F6       18       4A       0
+                text8                               1B7      1B7       27       4A       0
                 text7                                8C       8C       55       4A       0
-                text6                               1DA      1DA       18       4A       0
+                text6                               1DE      1DE       18       4A       0
                 text5                                25       25       67       4A       0
-                text4                               220      220       15      440       0
+                text4                               224      224       15      448       0
                 text3                                E1       E1       32       4A       0
-                text2                               13D      13D       29       4A       0
-                text1                               1B5      1B5       25       4A       0
-                maintext                            235      235       13      440       0
-                cstackBANK0                          20       20        A       20       1
+                text2                               166      166       29       4A       0
+                text1                               13D      13D       29       4A       0
+                maintext                            239      239       13      448       0
+                cstackBANK0                          20       20        C       20       1
                 cstackCOMMON                         70       70        B       70       1
-                bssBANK0                             2A       2A        9       20       1
+                bssBANK0                             2C       2C        9       20       1
                 bssCOMMON                            7B       7B        1       70       1
-                strings                             20A      20A       16      414       0
+                strings                             20E      20E       16      41C       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
@@ -68,26 +68,26 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intentry                              4        4        6         0
                 reset_vec                             0        0        1         0
                 text15                              113      113       2A         0
-                text14                              166      166       28         0
-                text13                              258      258       10         0
-                text12                              248      248       10         0
-                text11                              274      274        C         0
-                text10                              268      268        C         0
-                text9                               1F2      1F2       18         0
-                text8                               18E      18E       27         0
+                text14                              18F      18F       28         0
+                text13                              25C      25C       10         0
+                text12                              24C      24C       10         0
+                text11                              278      278        C         0
+                text10                              26C      26C        C         0
+                text9                               1F6      1F6       18         0
+                text8                               1B7      1B7       27         0
                 text7                                8C       8C       55         0
-                text6                               1DA      1DA       18         0
+                text6                               1DE      1DE       18         0
                 text5                                25       25       67         0
-                text4                               220      220       15         0
+                text4                               224      224       15         0
                 text3                                E1       E1       32         0
-                text2                               13D      13D       29         0
-                text1                               1B5      1B5       25         0
-                maintext                            235      235       13         0
+                text2                               166      166       29         0
+                text1                               13D      13D       29         0
+                maintext                            239      239       13         0
 
         CLASS   STRCODE        
 
         CLASS   STRING         
-                strings                             20A      20A       16         0
+                strings                             20E      20E       16         0
 
         CLASS   CONST          
 
@@ -99,8 +99,8 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssCOMMON                            7B       7B        1         1
 
         CLASS   BANK0          
-                cstackBANK0                          20       20        A         1
-                bssBANK0                             2A       2A        9         1
+                cstackBANK0                          20       20        C         1
+                bssBANK0                             2C       2C        9         1
 
         CLASS   BANK1          
 
@@ -138,47 +138,47 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
                 intentry                       000004  000015  000019         8       0  CODE        2
-                cstackBANK0                    000020  000013  000033        20       1  BANK0       1
+                cstackBANK0                    000020  000015  000035        20       1  BANK0       1
                 functab                        000019  00000C  000025        32       0  ENTRY       2
-                text5                          000025  0001E5  00020A        4A       0  CODE        2
+                text5                          000025  0001E9  00020E        4A       0  CODE        2
                 cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
-                strings                        00020A  000016  000220       414       0  STRING      2
-                text4                          000220  000060  000280       440       0  CODE        2
+                strings                        00020E  000016  000224       41C       0  STRING      2
+                text4                          000224  000060  000284       448       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0033-006F             3D           1
+        BANK0            0035-006F             3B           1
         BANK1            00A0-00BF             20           1
         CODE             0001-0003              3           2
-                         0280-07FF            580
+                         0284-07FF            57C
         COMMON           007C-007D              2           1
         CONST            0001-0003              3           2
-                         0280-07FF            100
+                         0284-07FF            100
         EEDATA           2100-213F             40           2
         ENTRY            0001-0003              3           2
-                         0280-07FF            100
+                         0284-07FF            100
         IDLOC            2000-2003              4           2
-        RAM              0033-006F             3D           1
+        RAM              0035-006F             3B           1
                          00A0-00BF             20
         SFR0             0000-001F             20           1
         SFR1             0080-009F             20           1
         SFR2             0100-016F             70           1
         SFR3             0180-01EF             70           1
         STRCODE          0001-0003              3           2
-                         0280-07FF            580
+                         0284-07FF            57C
         STRING           0001-0003              3           2
-                         0280-07FF            100
+                         0284-07FF            100
 
                                   Symbol Table
 
 ?___awdiv                cstackCOMMON 0072
 _ADCON0                  (abs)        001F
 _ADCON1bits              (abs)        009F
-_DIGITS                  strings      021A
+_DIGITS                  strings      021E
 _GIE                     (abs)        005F
-_NUMBERS                 strings      0210
+_NUMBERS                 strings      0214
 _PEIE                    (abs)        005E
 _PIE1bits                (abs)        008C
 _PIR1bits                (abs)        000C
@@ -221,7 +221,7 @@ __Hsfr1                  sfr1         004A
 __Hsfr2                  sfr2         004A
 __Hsfr3                  sfr3         004A
 __Hsivt                  sivt         000A
-__Hspace_0               (abs)        0280
+__Hspace_0               (abs)        0284
 __Hspace_1               (abs)        007C
 __Hspace_2               (abs)        004A
 __Hspace_3               (abs)        0000
@@ -267,7 +267,7 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        004A
 __Lstrings               strings      004A
 __Ltext                  text         004A
-__S0                     (abs)        0280
+__S0                     (abs)        0284
 __S1                     (abs)        007C
 __S3                     (abs)        0000
 ___awdiv                 text5        0025
@@ -276,7 +276,7 @@ ___awdiv@dividend        cstackCOMMON 0074
 ___awdiv@divisor         cstackCOMMON 0072
 ___awdiv@quotient        cstackCOMMON 0078
 ___awdiv@sign            cstackCOMMON 0077
-___bmul                  text4        0220
+___bmul                  text4        0224
 ___bmul@multiplicand     cstackCOMMON 0072
 ___bmul@multiplier       cstackCOMMON 0074
 ___bmul@product          cstackCOMMON 0073
@@ -291,77 +291,77 @@ ___stack_hi              stack        004A
 ___stack_lo              stack        004A
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-__end_of_DIGITS          strings      0220
-__end_of_NUMBERS         strings      021A
+__end_of_DIGITS          strings      0224
+__end_of_NUMBERS         strings      021E
 __end_of___awdiv         text5        008C
-__end_of___bmul          text4        0235
+__end_of___bmul          text4        0239
 __end_of__fptable        functab      0025
 __end_of__initialization cinit        0017
-__end_of__stringtab      strings      0210
+__end_of__stringtab      strings      0214
 __end_of_calcDigit       text3        0113
-__end_of_change          text9        020A
-__end_of_checkButton     text8        01B5
+__end_of_change          text9        020E
+__end_of_checkButton     text8        01DE
 __end_of_checkButtons    text7        00E1
-__end_of_down1           text11       0280
-__end_of_down2           text10       0274
-__end_of_getNumber       text2        0166
+__end_of_down1           text11       0284
+__end_of_down2           text10       0278
+__end_of_getNumber       text2        018F
 __end_of_isr             text15       013D
-__end_of_main            maintext     0248
-__end_of_setup           text6        01F2
-__end_of_up1             text13       0268
-__end_of_up2             text12       0258
-__end_of_updateDisplay   text1        01DA
-__end_of_win             text14       018E
+__end_of_main            maintext     024C
+__end_of_setup           text6        01F6
+__end_of_up1             text13       026C
+__end_of_up2             text12       025C
+__end_of_updateDisplay   text1        0166
+__end_of_win             text14       01B7
 __fptable                functab      0019
 __initialization         cinit        000B
-__pbssBANK0              bssBANK0     002A
+__pbssBANK0              bssBANK0     002C
 __pbssCOMMON             bssCOMMON    007B
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0070
 __pfunctab               functab      0019
 __pintentry              intentry     0004
-__pmaintext              maintext     0235
-__pstrings               strings      020A
-__ptext1                 text1        01B5
-__ptext10                text10       0268
-__ptext11                text11       0274
-__ptext12                text12       0248
-__ptext13                text13       0258
-__ptext14                text14       0166
+__pmaintext              maintext     0239
+__pstrings               strings      020E
+__ptext1                 text1        013D
+__ptext10                text10       026C
+__ptext11                text11       0278
+__ptext12                text12       024C
+__ptext13                text13       025C
+__ptext14                text14       018F
 __ptext15                text15       0113
-__ptext2                 text2        013D
+__ptext2                 text2        0166
 __ptext3                 text3        00E1
-__ptext4                 text4        0220
+__ptext4                 text4        0224
 __ptext5                 text5        0025
-__ptext6                 text6        01DA
+__ptext6                 text6        01DE
 __ptext7                 text7        008C
-__ptext8                 text8        018E
-__ptext9                 text9        01F2
+__ptext8                 text8        01B7
+__ptext9                 text9        01F6
 __size_of__fptable       (abs)        0000
-__stringbase             strings      020F
-__stringtab              strings      020A
+__stringbase             strings      0213
+__stringtab              strings      020E
 _button                  bssCOMMON    007B
 _calcDigit               text3        00E1
 _calcDigit$237           cstackBANK0  0022
-_change                  text9        01F2
-_checkButton             text8        018E
+_change                  text9        01F6
+_checkButton             text8        01B7
 _checkButtons            text7        008C
 _checkButtons$216        cstackCOMMON 0076
-_down1                   text11       0274
-_down2                   text10       0268
-_getNumber               text2        013D
+_down1                   text11       0278
+_down2                   text10       026C
+_getNumber               text2        0166
 _isr                     text15       0113
-_main                    maintext     0235
-_score                   bssBANK0     002A
-_setup                   text6        01DA
-_timers                  bssBANK0     002F
-_up1                     text13       0258
-_up2                     text12       0248
-_updateDisplay           text1        01B5
-_win                     text14       0166
+_main                    maintext     0239
+_score                   bssBANK0     002C
+_setup                   text6        01DE
+_timers                  bssBANK0     0031
+_up1                     text13       025C
+_up2                     text12       024C
+_updateDisplay           text1        013D
+_win                     text14       018F
 btemp                    (abs)        007E
 calcDigit@d              cstackBANK0  0026
-calcDigit@digit          cstackCOMMON 007A
+calcDigit@dozen          cstackCOMMON 007A
 calcDigit@u              cstackBANK0  0024
 calcDigit@value          cstackBANK0  0025
 change@aux               cstackCOMMON 0072
@@ -382,6 +382,8 @@ reset_vec                reset_vec    0000
 saved_w                  (abs)        007E
 start                    init         000A
 start_initialization     cinit        000B
+updateDisplay@digit      cstackBANK0  0028
+updateDisplay@number     cstackBANK0  0027
 wtemp0                   (abs)        007E
 
 
@@ -394,18 +396,18 @@ C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c estimated size: 103
 
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-		___bmul        		CODE           	0220	0000	21
+		___bmul        		CODE           	0224	0000	21
 
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c estimated size: 21
 
 buttons.c
-		_win           		CODE           	0166	0000	40
-		_change        		CODE           	01F2	0000	24
-		_down1         		CODE           	0274	0000	12
-		_down2         		CODE           	0268	0000	12
-		_up1           		CODE           	0258	0000	16
-		_checkButton   		CODE           	018E	0000	39
-		_up2           		CODE           	0248	0000	16
+		_win           		CODE           	018F	0000	40
+		_change        		CODE           	01F6	0000	24
+		_down1         		CODE           	0278	0000	12
+		_down2         		CODE           	026C	0000	12
+		_up1           		CODE           	025C	0000	16
+		_checkButton   		CODE           	01B7	0000	39
+		_up2           		CODE           	024C	0000	16
 		_checkButtons  		CODE           	008C	0000	85
 
 buttons.c estimated size: 244
@@ -416,24 +418,24 @@ interrupt.c
 interrupt.c estimated size: 42
 
 shared
-		__stringtab    		STRING         	020A	0000	6
+		__stringtab    		STRING         	020E	0000	6
 		__initialization		CODE           	000B	0000	12
-		_DIGITS        		STRING         	021A	0000	6
+		_DIGITS        		STRING         	021E	0000	6
 		__fptable      		ENTRY          	0019	0000	12
-		_NUMBERS       		STRING         	0210	0000	10
+		_NUMBERS       		STRING         	0214	0000	10
 
 shared estimated size: 46
 
 display.c
 		_calcDigit     		CODE           	00E1	0000	50
-		_getNumber     		CODE           	013D	0000	41
-		_updateDisplay 		CODE           	01B5	0000	37
+		_getNumber     		CODE           	0166	0000	41
+		_updateDisplay 		CODE           	013D	0000	41
 
-display.c estimated size: 128
+display.c estimated size: 132
 
 main.c
-		_main          		CODE           	0235	0000	19
-		_setup         		CODE           	01DA	0000	24
+		_main          		CODE           	0239	0000	19
+		_setup         		CODE           	01DE	0000	24
 
 main.c estimated size: 43
 

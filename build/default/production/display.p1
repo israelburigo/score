@@ -7,12 +7,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./defines.h: 37: struct BUTTON {
 [s S70 `uc 1 ]
 [n S70 BUTTON status ]
-"216 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"278
+"278 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"216
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "6 ./defines.h
 [p x FOSC  =  HS         ]
 "7
@@ -204,12 +204,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./defines.h: 77: volatile unsigned int timers[2];
 [v _timers `Vui ~T0 @X0 -> 2 `i e ]
 "3 display.c
-[; ;display.c: 3: char calcDigit(signed char value, char digit) {
+[; ;display.c: 3: char calcDigit(signed char value, char dozen) {
 [v _calcDigit `(uc ~T0 @X0 1 ef2`c`uc ]
 {
 [e :U _calcDigit ]
 [v _value `c ~T0 @X0 1 r1 ]
-[v _digit `uc ~T0 @X0 1 r2 ]
+[v _dozen `uc ~T0 @X0 1 r2 ]
 [f ]
 "4
 [; ;display.c: 4:     char d = (char)value / 10;
@@ -220,8 +220,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _u `uc ~T0 @X0 1 a ]
 [e = _u -> - -> -> _value `uc `i * -> _d `i -> 10 `i `uc ]
 "6
-[; ;display.c: 6:     return score.digit == digit ? d : u;
-[e ) -> ? == -> . _score 4 `i -> _digit `i : -> _d `i -> _u `i `uc ]
+[; ;display.c: 6:     return score.digit == dozen ? d : u;
+[e ) -> ? == -> . _score 4 `i -> _dozen `i : -> _d `i -> _u `i `uc ]
 [e $UE 72  ]
 "7
 [; ;display.c: 7: }
@@ -277,20 +277,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 78  ]
 [e :U 79 ]
 "19
-[; ;display.c: 19:     timers[0] = 100;
-[e = *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 100 `i `ui ]
+[; ;display.c: 19:     timers[0] = 500;
+[e = *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 500 `i `ui ]
 "21
 [; ;display.c: 21:     if (++score.digit > 5) score.digit = 0;
 [e $ ! > -> =+ . _score 4 -> -> 1 `i `uc `i -> 5 `i 80  ]
 [e = . _score 4 -> -> 0 `i `uc ]
 [e :U 80 ]
 "23
-[; ;display.c: 23:     PORTB = NUMBERS[getNumber()];
-[e = _PORTB -> *U + &U _NUMBERS * -> ( _getNumber ..  `ux -> -> # *U &U _NUMBERS `ui `ux `uc ]
+[; ;display.c: 23:     char number = NUMBERS[getNumber()];
+[v _number `uc ~T0 @X0 1 a ]
+[e = _number *U + &U _NUMBERS * -> ( _getNumber ..  `ux -> -> # *U &U _NUMBERS `ui `ux ]
 "24
-[; ;display.c: 24:     PORTC = DIGITS[score.digit];
-[e = _PORTC -> *U + &U _DIGITS * -> . _score 4 `ux -> -> # *U &U _DIGITS `ui `ux `uc ]
-"25
-[; ;display.c: 25: }
+[; ;display.c: 24:     char digit = DIGITS[score.digit];
+[v _digit `uc ~T0 @X0 1 a ]
+[e = _digit *U + &U _DIGITS * -> . _score 4 `ux -> -> # *U &U _DIGITS `ui `ux ]
+"26
+[; ;display.c: 26:     PORTC = digit;
+[e = _PORTC -> _digit `uc ]
+"27
+[; ;display.c: 27:     PORTB = number;
+[e = _PORTB -> _number `uc ]
+"28
+[; ;display.c: 28: }
 [e :UE 78 ]
 }

@@ -69,7 +69,7 @@
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S250 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S252 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -78,8 +78,8 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "454
-[u S258 . 1 `S250 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES258  1 e 1 @12 ]
+[u S260 . 1 `S252 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES260  1 e 1 @12 ]
 "510
 [v _TMR1 TMR1 `VEus  1 e 2 @14 ]
 "531
@@ -146,7 +146,11 @@
 "17 C:\Users\israel\MPLABXProjects\score.X\display.c
 [v _updateDisplay updateDisplay `(v  1 e 1 0 ]
 {
-"25
+"24
+[v updateDisplay@digit digit `uc  1 a 1 8 ]
+"23
+[v updateDisplay@number number `uc  1 a 1 7 ]
+"28
 } 0
 "9
 [v _getNumber getNumber `(uc  1 e 1 0 ]
@@ -163,7 +167,7 @@
 [v calcDigit@u u `uc  1 a 1 4 ]
 "3
 [v calcDigit@value value `c  1 a 1 wreg ]
-[v calcDigit@digit digit `uc  1 p 1 10 ]
+[v calcDigit@dozen dozen `uc  1 p 1 10 ]
 [v calcDigit@value value `c  1 a 1 5 ]
 "7
 } 0

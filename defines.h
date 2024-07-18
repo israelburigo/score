@@ -30,7 +30,7 @@
 #define BUTTON_STATUS_PRESSED 1
 
 #define TIME_100ms 100
-#define TIME_5ms 100
+#define TIME_5ms 500
 
 #define checkZero(x) !(x || x)
 
