@@ -12,32 +12,32 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/debug\score.X.debug.o
-cinit CODE 0 B B F 2 1
-text1 CODE 0 1B5 1B5 25 2 1
-text2 CODE 0 13E 13E 29 2 1
-text3 CODE 0 E2 E2 32 2 1
-text4 CODE 0 220 220 15 2 1
-text5 CODE 0 26 26 67 2 1
-text6 CODE 0 1DA 1DA 18 2 1
-text7 CODE 0 8D 8D 55 2 1
-text8 CODE 0 18F 18F 26 2 1
-text9 CODE 0 1F2 1F2 18 2 1
-text10 CODE 0 268 268 C 2 1
-text11 CODE 0 274 274 C 2 1
-text12 CODE 0 248 248 10 2 1
-text13 CODE 0 258 258 10 2 1
-text14 CODE 0 167 167 28 2 1
-text15 CODE 0 114 114 2A 2 1
-maintext CODE 0 235 235 13 2 1
-cstackCOMMON COMMON 1 70 70 A 1 1
-cstackBANK0 BANK0 1 20 20 B 1 1
+cinit CODE 0 B B E 2 1
+text1 CODE 0 13D 13D 29 2 1
+text2 CODE 0 166 166 29 2 1
+text3 CODE 0 E1 E1 32 2 1
+text4 CODE 0 225 225 15 2 1
+text5 CODE 0 25 25 67 2 1
+text6 CODE 0 1DE 1DE 19 2 1
+text7 CODE 0 8C 8C 55 2 1
+text8 CODE 0 1B7 1B7 27 2 1
+text9 CODE 0 1F7 1F7 18 2 1
+text10 CODE 0 26D 26D C 2 1
+text11 CODE 0 279 279 C 2 1
+text12 CODE 0 24D 24D 10 2 1
+text13 CODE 0 25D 25D 10 2 1
+text14 CODE 0 18F 18F 28 2 1
+text15 CODE 0 113 113 2A 2 1
+maintext CODE 0 23A 23A 13 2 1
+cstackCOMMON COMMON 1 70 70 B 1 1
+cstackBANK0 BANK0 1 20 20 C 1 1
 intentry CODE 0 4 4 6 2 1
-bssBANK0 BANK0 1 2B 2B 9 1 1
-strings STRING 0 20A 20A 16 2 1
-functab ENTRY 0 1A 1A C 2 1
-bssCOMMON COMMON 1 7A 7A 2 1 1
+bssBANK0 BANK0 1 2C 2C 9 1 1
+strings STRING 0 20F 20F 16 2 1
+functab ENTRY 0 19 19 C 2 1
+bssCOMMON COMMON 1 7B 7B 1 1 1
 config CONFIG 4 2007 2007 1 2 1
-$C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
+$C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
 reset_vec CODE 0 0 0 1 2 1
 end_init CODE 0 A A 1 2 1
 config CONFIG 4 2007 2007 1 2 1
@@ -47,17 +47,17 @@ config CONFIG 4 2007 2007 1 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 34-6F 1
+RAM 35-6F 1
 RAM A0-BF 1
-BANK0 34-6F 1
+BANK0 35-6F 1
 BANK1 A0-BF 1
 CONST 1-3 2
-CONST 280-7FF 2
+CONST 285-7FF 2
 ENTRY 1-3 2
-ENTRY 280-7FF 2
+ENTRY 285-7FF 2
 IDLOC 2000-2003 2
 CODE 1-3 2
-CODE 280-7FF 2
+CODE 285-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-16F 1
@@ -65,9 +65,9 @@ SFR3 180-1EF 1
 COMMON 7C-7D 1
 EEDATA 2100-213F 2
 STRCODE 1-3 2
-STRCODE 280-7FF 2
+STRCODE 285-7FF 2
 STRING 1-3 2
-STRING 280-7FF 2
+STRING 285-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -82,192 +82,194 @@ STRING 280-7FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\score.X.debug.o
-B cinit CODE >658:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-B cinit CODE >661:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-B cinit CODE >681:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-C cinit CODE >682:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-D cinit CODE >685:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-E cinit CODE >686:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-F cinit CODE >687:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-10 cinit CODE >688:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-11 cinit CODE >689:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-12 cinit CODE >690:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-13 cinit CODE >691:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-14 cinit CODE >692:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-15 cinit CODE >693:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-16 cinit CODE >694:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-17 cinit CODE >695:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-18 cinit CODE >701:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-18 cinit CODE >703:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-19 cinit CODE >704:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1A functab ENTRY >2832:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1A functab ENTRY >2834:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1A functab ENTRY >2835:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1A functab ENTRY >2836:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1B functab ENTRY >2837:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1C functab ENTRY >2838:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1D functab ENTRY >2839:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1E functab ENTRY >2840:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1F functab ENTRY >2842:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-1F functab ENTRY >2843:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-20 functab ENTRY >2846:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-20 functab ENTRY >2847:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-21 functab ENTRY >2850:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-21 functab ENTRY >2851:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-22 functab ENTRY >2854:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-22 functab ENTRY >2855:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-23 functab ENTRY >2858:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-23 functab ENTRY >2859:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-24 functab ENTRY >2862:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-24 functab ENTRY >2863:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-25 functab ENTRY >2866:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
-25 functab ENTRY >2867:C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_1.s
+B cinit CODE >658:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+B cinit CODE >661:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+B cinit CODE >681:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+C cinit CODE >684:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+D cinit CODE >685:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+E cinit CODE >686:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+F cinit CODE >687:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+10 cinit CODE >688:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+11 cinit CODE >689:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+12 cinit CODE >690:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+13 cinit CODE >691:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+14 cinit CODE >692:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+15 cinit CODE >693:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+16 cinit CODE >694:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+17 cinit CODE >700:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+17 cinit CODE >702:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+18 cinit CODE >703:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+19 functab ENTRY >2858:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+19 functab ENTRY >2860:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+19 functab ENTRY >2861:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+19 functab ENTRY >2862:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1A functab ENTRY >2863:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1B functab ENTRY >2864:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1C functab ENTRY >2865:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1D functab ENTRY >2866:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1E functab ENTRY >2868:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1E functab ENTRY >2869:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1F functab ENTRY >2872:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+1F functab ENTRY >2873:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+20 functab ENTRY >2876:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+20 functab ENTRY >2877:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+21 functab ENTRY >2880:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+21 functab ENTRY >2881:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+22 functab ENTRY >2884:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+22 functab ENTRY >2885:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+23 functab ENTRY >2888:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+23 functab ENTRY >2889:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+24 functab ENTRY >2892:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
+24 functab ENTRY >2893:C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_1.s
 4 intentry CODE >3:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-114 text15 CODE >3:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-114 text15 CODE >4:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-11A text15 CODE >5:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-11B text15 CODE >6:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-124 text15 CODE >6:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-127 text15 CODE >7:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-130 text15 CODE >7:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-133 text15 CODE >8:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-137 text15 CODE >10:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
-167 text14 CODE >38:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-167 text14 CODE >39:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-16B text14 CODE >39:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-170 text14 CODE >40:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-176 text14 CODE >40:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-17E text14 CODE >41:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-184 text14 CODE >41:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-18C text14 CODE >42:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-18E text14 CODE >43:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-258 text13 CODE >15:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-258 text13 CODE >16:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-261 text13 CODE >16:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-267 text13 CODE >17:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-248 text12 CODE >19:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-248 text12 CODE >20:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-251 text12 CODE >20:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-257 text12 CODE >21:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-274 text11 CODE >23:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-274 text11 CODE >24:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-27F text11 CODE >25:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-268 text10 CODE >27:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-268 text10 CODE >28:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-273 text10 CODE >29:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1F2 text9 CODE >31:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1F2 text9 CODE >32:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+113 text15 CODE >3:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+113 text15 CODE >4:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+119 text15 CODE >5:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+11A text15 CODE >6:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+123 text15 CODE >6:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+126 text15 CODE >7:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+12F text15 CODE >7:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+132 text15 CODE >8:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+136 text15 CODE >10:C:\Users\israel\MPLABXProjects\score.X\interrupt.c
+18F text14 CODE >38:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+18F text14 CODE >39:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+193 text14 CODE >39:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+198 text14 CODE >40:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+19E text14 CODE >40:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1A6 text14 CODE >41:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1AC text14 CODE >41:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1B4 text14 CODE >42:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1B6 text14 CODE >43:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+25D text13 CODE >15:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+25D text13 CODE >16:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+266 text13 CODE >16:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+26C text13 CODE >17:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+24D text12 CODE >19:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+24D text12 CODE >20:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+256 text12 CODE >20:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+25C text12 CODE >21:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+279 text11 CODE >23:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+279 text11 CODE >24:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+284 text11 CODE >25:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+26D text10 CODE >27:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+26D text10 CODE >28:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+278 text10 CODE >29:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1F7 text9 CODE >31:C:\Users\israel\MPLABXProjects\score.X\buttons.c
 1F7 text9 CODE >32:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1FE text9 CODE >32:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-203 text9 CODE >33:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-205 text9 CODE >34:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-207 text9 CODE >35:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-209 text9 CODE >36:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-18F text8 CODE >3:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-190 text8 CODE >4:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-19C text8 CODE >5:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1A1 text8 CODE >6:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1A8 text8 CODE >9:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1B1 text8 CODE >11:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1B4 text8 CODE >13:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-8D text7 CODE >45:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-8D text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-97 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-A5 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-B1 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-C0 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-CC text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-DA text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-E1 text7 CODE >52:C:\Users\israel\MPLABXProjects\score.X\buttons.c
-1DA text6 CODE >3:C:\Users\israel\MPLABXProjects\score.X\main.c
-1DA text6 CODE >4:C:\Users\israel\MPLABXProjects\score.X\main.c
-1DE text6 CODE >5:C:\Users\israel\MPLABXProjects\score.X\main.c
-1DF text6 CODE >6:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E0 text6 CODE >7:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E3 text6 CODE >8:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E4 text6 CODE >10:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E5 text6 CODE >11:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E6 text6 CODE >12:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E7 text6 CODE >14:C:\Users\israel\MPLABXProjects\score.X\main.c
-1E8 text6 CODE >15:C:\Users\israel\MPLABXProjects\score.X\main.c
-1EE text6 CODE >17:C:\Users\israel\MPLABXProjects\score.X\main.c
-1EF text6 CODE >18:C:\Users\israel\MPLABXProjects\score.X\main.c
-1F0 text6 CODE >19:C:\Users\israel\MPLABXProjects\score.X\main.c
-1F1 text6 CODE >20:C:\Users\israel\MPLABXProjects\score.X\main.c
-26 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-26 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-27 text5 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-2B text5 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-2E text5 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-30 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-32 text5 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-36 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-39 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-3B text5 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-3F text5 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-41 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-47 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-49 text5 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1FC text9 CODE >32:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+203 text9 CODE >32:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+208 text9 CODE >33:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+20A text9 CODE >34:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+20C text9 CODE >35:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+20E text9 CODE >36:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1B7 text8 CODE >3:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1B8 text8 CODE >4:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1C4 text8 CODE >5:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1C9 text8 CODE >6:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1CF text8 CODE >7:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1D1 text8 CODE >9:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1DA text8 CODE >11:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1DD text8 CODE >13:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+8C text7 CODE >45:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+8C text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+96 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+A4 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+B0 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+BF text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+CB text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+D9 text7 CODE >46:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+E0 text7 CODE >52:C:\Users\israel\MPLABXProjects\score.X\buttons.c
+1DE text6 CODE >3:C:\Users\israel\MPLABXProjects\score.X\main.c
+1DE text6 CODE >4:C:\Users\israel\MPLABXProjects\score.X\main.c
+1E2 text6 CODE >5:C:\Users\israel\MPLABXProjects\score.X\main.c
+1E4 text6 CODE >6:C:\Users\israel\MPLABXProjects\score.X\main.c
+1E5 text6 CODE >7:C:\Users\israel\MPLABXProjects\score.X\main.c
+1E8 text6 CODE >8:C:\Users\israel\MPLABXProjects\score.X\main.c
+1E9 text6 CODE >10:C:\Users\israel\MPLABXProjects\score.X\main.c
+1EA text6 CODE >11:C:\Users\israel\MPLABXProjects\score.X\main.c
+1EB text6 CODE >12:C:\Users\israel\MPLABXProjects\score.X\main.c
+1EC text6 CODE >14:C:\Users\israel\MPLABXProjects\score.X\main.c
+1ED text6 CODE >15:C:\Users\israel\MPLABXProjects\score.X\main.c
+1F3 text6 CODE >17:C:\Users\israel\MPLABXProjects\score.X\main.c
+1F4 text6 CODE >18:C:\Users\israel\MPLABXProjects\score.X\main.c
+1F5 text6 CODE >19:C:\Users\israel\MPLABXProjects\score.X\main.c
+1F6 text6 CODE >20:C:\Users\israel\MPLABXProjects\score.X\main.c
+25 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+25 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+26 text5 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+2A text5 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+2D text5 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+2F text5 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31 text5 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+35 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+38 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3A text5 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3E text5 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+40 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+46 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+48 text5 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+49 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 4A text5 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-4B text5 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-4F text5 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-51 text5 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-55 text5 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+4E text5 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+50 text5 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+54 text5 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+58 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 59 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-5A text5 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-5E text5 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-60 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-62 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-66 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-6A text5 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-6D text5 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-70 text5 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+5D text5 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+5F text5 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+61 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+65 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+69 text5 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+6C text5 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+6F text5 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+70 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 71 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-72 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-76 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-78 text5 CODE >36:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-7E text5 CODE >38:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-83 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-86 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-88 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-8C text5 CODE >41:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-220 text4 CODE >4:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-221 text4 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-222 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-226 text4 CODE >44:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-22A text4 CODE >45:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-22C text4 CODE >46:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-22E text4 CODE >47:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-233 text4 CODE >50:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-234 text4 CODE >51:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
-E2 text3 CODE >3:C:\Users\israel\MPLABXProjects\score.X\display.c
-E5 text3 CODE >4:C:\Users\israel\MPLABXProjects\score.X\display.c
-F5 text3 CODE >5:C:\Users\israel\MPLABXProjects\score.X\display.c
-FD text3 CODE >6:C:\Users\israel\MPLABXProjects\score.X\display.c
-FF text3 CODE >6:C:\Users\israel\MPLABXProjects\score.X\display.c
-113 text3 CODE >7:C:\Users\israel\MPLABXProjects\score.X\display.c
-13E text2 CODE >9:C:\Users\israel\MPLABXProjects\score.X\display.c
-13E text2 CODE >10:C:\Users\israel\MPLABXProjects\score.X\display.c
-142 text2 CODE >10:C:\Users\israel\MPLABXProjects\score.X\display.c
-14A text2 CODE >11:C:\Users\israel\MPLABXProjects\score.X\display.c
-14C text2 CODE >11:C:\Users\israel\MPLABXProjects\score.X\display.c
-155 text2 CODE >12:C:\Users\israel\MPLABXProjects\score.X\display.c
-15D text2 CODE >13:C:\Users\israel\MPLABXProjects\score.X\display.c
-165 text2 CODE >14:C:\Users\israel\MPLABXProjects\score.X\display.c
-166 text2 CODE >15:C:\Users\israel\MPLABXProjects\score.X\display.c
-1B5 text1 CODE >17:C:\Users\israel\MPLABXProjects\score.X\display.c
-1B5 text1 CODE >18:C:\Users\israel\MPLABXProjects\score.X\display.c
-1BE text1 CODE >19:C:\Users\israel\MPLABXProjects\score.X\display.c
-1C2 text1 CODE >21:C:\Users\israel\MPLABXProjects\score.X\display.c
-1C8 text1 CODE >21:C:\Users\israel\MPLABXProjects\score.X\display.c
-1CD text1 CODE >23:C:\Users\israel\MPLABXProjects\score.X\display.c
-1D4 text1 CODE >24:C:\Users\israel\MPLABXProjects\score.X\display.c
-1D9 text1 CODE >25:C:\Users\israel\MPLABXProjects\score.X\display.c
-235 maintext CODE >22:C:\Users\israel\MPLABXProjects\score.X\main.c
-235 maintext CODE >24:C:\Users\israel\MPLABXProjects\score.X\main.c
-236 maintext CODE >26:C:\Users\israel\MPLABXProjects\score.X\main.c
-244 maintext CODE >29:C:\Users\israel\MPLABXProjects\score.X\main.c
-245 maintext CODE >30:C:\Users\israel\MPLABXProjects\score.X\main.c
+75 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+77 text5 CODE >36:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+7D text5 CODE >38:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+82 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+85 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+87 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+8B text5 CODE >41:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+225 text4 CODE >4:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+226 text4 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+227 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+22B text4 CODE >44:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+22F text4 CODE >45:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+231 text4 CODE >46:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+233 text4 CODE >47:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+238 text4 CODE >50:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+239 text4 CODE >51:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+E1 text3 CODE >3:C:\Users\israel\MPLABXProjects\score.X\display.c
+E4 text3 CODE >4:C:\Users\israel\MPLABXProjects\score.X\display.c
+F4 text3 CODE >5:C:\Users\israel\MPLABXProjects\score.X\display.c
+FC text3 CODE >6:C:\Users\israel\MPLABXProjects\score.X\display.c
+FE text3 CODE >6:C:\Users\israel\MPLABXProjects\score.X\display.c
+112 text3 CODE >7:C:\Users\israel\MPLABXProjects\score.X\display.c
+166 text2 CODE >9:C:\Users\israel\MPLABXProjects\score.X\display.c
+166 text2 CODE >10:C:\Users\israel\MPLABXProjects\score.X\display.c
+16A text2 CODE >10:C:\Users\israel\MPLABXProjects\score.X\display.c
+172 text2 CODE >11:C:\Users\israel\MPLABXProjects\score.X\display.c
+174 text2 CODE >11:C:\Users\israel\MPLABXProjects\score.X\display.c
+17D text2 CODE >12:C:\Users\israel\MPLABXProjects\score.X\display.c
+185 text2 CODE >13:C:\Users\israel\MPLABXProjects\score.X\display.c
+18D text2 CODE >14:C:\Users\israel\MPLABXProjects\score.X\display.c
+18E text2 CODE >15:C:\Users\israel\MPLABXProjects\score.X\display.c
+13D text1 CODE >17:C:\Users\israel\MPLABXProjects\score.X\display.c
+13D text1 CODE >18:C:\Users\israel\MPLABXProjects\score.X\display.c
+146 text1 CODE >19:C:\Users\israel\MPLABXProjects\score.X\display.c
+14A text1 CODE >21:C:\Users\israel\MPLABXProjects\score.X\display.c
+150 text1 CODE >21:C:\Users\israel\MPLABXProjects\score.X\display.c
+155 text1 CODE >23:C:\Users\israel\MPLABXProjects\score.X\display.c
+15C text1 CODE >24:C:\Users\israel\MPLABXProjects\score.X\display.c
+161 text1 CODE >26:C:\Users\israel\MPLABXProjects\score.X\display.c
+163 text1 CODE >27:C:\Users\israel\MPLABXProjects\score.X\display.c
+165 text1 CODE >28:C:\Users\israel\MPLABXProjects\score.X\display.c
+23A maintext CODE >22:C:\Users\israel\MPLABXProjects\score.X\main.c
+23A maintext CODE >24:C:\Users\israel\MPLABXProjects\score.X\main.c
+23B maintext CODE >26:C:\Users\israel\MPLABXProjects\score.X\main.c
+249 maintext CODE >29:C:\Users\israel\MPLABXProjects\score.X\main.c
+24A maintext CODE >30:C:\Users\israel\MPLABXProjects\score.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -282,214 +284,216 @@ FF text3 CODE >6:C:\Users\israel\MPLABXProjects\score.X\display.c
 %SYMTAB
 ___latbits 0 0 ABS 0 - dist/default/debug\score.X.debug.o
 ___awdiv@counter 76 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
-__Hspace_0 280 0 ABS 0 - -
+__Hspace_0 285 0 ABS 0 - -
 __Hspace_1 7C 0 ABS 0 - -
-__Hspace_2 4C 0 ABS 0 - -
+__Hspace_2 4A 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
-_checkButtons$219 76 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
+_checkButtons$216 76 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+updateDisplay@digit 28 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
 _T1CONbits 10 0 ABS 0 - dist/default/debug\score.X.debug.o
-__end_of_NUMBERS 434 0 STRING 0 strings dist/default/debug\score.X.debug.o
+__end_of_NUMBERS 43E 0 STRING 0 strings dist/default/debug\score.X.debug.o
 __L__absolute__ 0 0 ABS 0 __absolute__ -
-__Hstrings 4C 0 ABS 0 strings -
+__Hstrings 4A 0 ABS 0 strings -
 checkButton@btn 74 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 _PEIE 5E 0 ABS 0 - dist/default/debug\score.X.debug.o
 _TMR1 E 0 ABS 0 - dist/default/debug\score.X.debug.o
-___sp 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-_main 46A 0 CODE 0 maintext dist/default/debug\score.X.debug.o
+___sp 4A 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+_main 474 0 CODE 0 maintext dist/default/debug\score.X.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\score.X.debug.o
-__end_of_updateDisplay 3B4 0 CODE 0 text1 dist/default/debug\score.X.debug.o
-___stack_hi 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-___stack_lo 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-start 14 0 CODE 0 init C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-__pfunctab 34 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
-__HbssCOMMON 4C 0 ABS 0 bssCOMMON -
+__end_of_updateDisplay 2CC 0 CODE 0 text1 dist/default/debug\score.X.debug.o
+___stack_hi 4A 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+___stack_lo 4A 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+start 14 0 CODE 0 init C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+__pfunctab 32 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
+__HbssCOMMON 4A 0 ABS 0 bssCOMMON -
 checkButton@action 73 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 34 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-intlevel1 34 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-intlevel2 34 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-intlevel3 34 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-intlevel4 34 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-intlevel5 34 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-__LbssCOMMON 4C 0 ABS 0 bssCOMMON -
+intlevel0 32 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+intlevel1 32 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+intlevel2 32 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+intlevel3 32 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+intlevel4 32 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+intlevel5 32 0 ENTRY 0 functab C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+__LbssCOMMON 4A 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 wtemp0 7E 0 ABS 0 - dist/default/debug\score.X.debug.o
-__Hfunctab 4C 0 ENTRY 0 functab -
+__Hfunctab 4A 0 ENTRY 0 functab -
 ___awdiv@sign 77 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
-__Hclrtext 4C 0 ABS 0 clrtext -
+__Hclrtext 4A 0 ABS 0 clrtext -
 _ADCON0 1F 0 ABS 0 - dist/default/debug\score.X.debug.o
 ___awdiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
-__end_of___bmul 46A 0 CODE 0 text4 dist/default/debug\score.X.debug.o
-_DIGITS 434 0 STRING 0 strings dist/default/debug\score.X.debug.o
-__Lmaintext 4C 0 ABS 0 maintext -
+__end_of___bmul 474 0 CODE 0 text4 dist/default/debug\score.X.debug.o
+_DIGITS 43E 0 STRING 0 strings dist/default/debug\score.X.debug.o
+__Lmaintext 4A 0 ABS 0 maintext -
 ___bmul@multiplier 74 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 ___awdiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
-__end_of___awdiv 11A 0 CODE 0 text5 dist/default/debug\score.X.debug.o
-__end_of_checkButton 36A 0 CODE 0 text8 dist/default/debug\score.X.debug.o
-__end_of_change 414 0 CODE 0 text9 dist/default/debug\score.X.debug.o
-___stackhi 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
+__end_of___awdiv 118 0 CODE 0 text5 dist/default/debug\score.X.debug.o
+__end_of_checkButton 3BC 0 CODE 0 text8 dist/default/debug\score.X.debug.o
+__end_of_change 41E 0 CODE 0 text9 dist/default/debug\score.X.debug.o
+___stackhi 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
 start_initialization 16 0 CODE 0 cinit dist/default/debug\score.X.debug.o
-_checkButtons 11A 0 CODE 0 text7 dist/default/debug\score.X.debug.o
-__end_of_getNumber 2CE 0 CODE 0 text2 dist/default/debug\score.X.debug.o
+_checkButtons 118 0 CODE 0 text7 dist/default/debug\score.X.debug.o
+updateDisplay@number 27 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
+__end_of_getNumber 31E 0 CODE 0 text2 dist/default/debug\score.X.debug.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
-___int_sp 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-__Hbank0 4C 0 ABS 0 bank0 -
-__Hbank1 4C 0 ABS 0 bank1 -
-__Hbank2 4C 0 BANK2 1 bank2 -
-__Hbank3 4C 0 BANK3 1 bank3 -
-__Hcinit 34 0 CODE 0 cinit -
-_NUMBERS 420 0 STRING 0 strings dist/default/debug\score.X.debug.o
-__Hstack 4C 0 STACK 2 stack -
-_getNumber 27C 0 CODE 0 text2 dist/default/debug\score.X.debug.o
-__stringbase 41E 0 STRING 0 strings dist/default/debug\score.X.debug.o
-__Hmaintext 4C 0 ABS 0 maintext -
-__Hcommon 4C 0 ABS 0 common -
+___int_sp 4A 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+__Hbank0 4A 0 ABS 0 bank0 -
+__Hbank1 4A 0 ABS 0 bank1 -
+__Hbank2 4A 0 BANK2 1 bank2 -
+__Hbank3 4A 0 BANK3 1 bank3 -
+__Hcinit 32 0 CODE 0 cinit -
+_NUMBERS 42A 0 STRING 0 strings dist/default/debug\score.X.debug.o
+__Hstack 4A 0 STACK 2 stack -
+_getNumber 2CC 0 CODE 0 text2 dist/default/debug\score.X.debug.o
+__stringbase 428 0 STRING 0 strings dist/default/debug\score.X.debug.o
+__Hmaintext 4A 0 ABS 0 maintext -
+__Hcommon 4A 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 4 config -
-__Lbank0 4C 0 ABS 0 bank0 -
-__Lbank1 4C 0 ABS 0 bank1 -
-__Lbank2 4C 0 BANK2 1 bank2 -
-__Lbank3 4C 0 BANK3 1 bank3 -
+__Lbank0 4A 0 ABS 0 bank0 -
+__Lbank1 4A 0 ABS 0 bank1 -
+__Lbank2 4A 0 BANK2 1 bank2 -
+__Lbank3 4A 0 BANK3 1 bank3 -
 __Lcinit 16 0 CODE 0 cinit -
-__Lstack 4C 0 STACK 2 stack -
+__Lstack 4A 0 STACK 2 stack -
 __size_of__fptable 0 0 ABS 0 - dist/default/debug\score.X.debug.o
 _PORTAbits 5 0 ABS 0 - dist/default/debug\score.X.debug.o
-__Habs1 4C 0 ABS 0 abs1 -
-__Hcode 4C 0 ABS 0 code -
-__Hheap 4C 0 HEAP 7 heap -
+__Habs1 4A 0 ABS 0 abs1 -
+__Hcode 4A 0 ABS 0 code -
+__Hheap 4A 0 HEAP 7 heap -
 __Hinit 14 0 CODE 0 init -
-__Hsfr0 4C 0 ABS 0 sfr0 -
-__Hsfr1 4C 0 ABS 0 sfr1 -
-__Hsfr2 4C 0 ABS 0 sfr2 -
-__Hsfr3 4C 0 ABS 0 sfr3 -
+__Hsfr0 4A 0 ABS 0 sfr0 -
+__Hsfr1 4A 0 ABS 0 sfr1 -
+__Hsfr2 4A 0 ABS 0 sfr2 -
+__Hsfr3 4A 0 ABS 0 sfr3 -
 __Hsivt 14 0 CODE 0 sivt -
-__Htext 4C 0 ABS 0 text -
-__Labs1 4C 0 ABS 0 abs1 -
-__Lcode 4C 0 ABS 0 code -
-__Lheap 4C 0 HEAP 7 heap -
+__Htext 4A 0 ABS 0 text -
+__Labs1 4A 0 ABS 0 abs1 -
+__Lcode 4A 0 ABS 0 code -
+__Lheap 4A 0 HEAP 7 heap -
 __Linit 14 0 CODE 0 init -
-__Lsfr0 4C 0 ABS 0 sfr0 -
-__Lsfr1 4C 0 ABS 0 sfr1 -
-__Lsfr2 4C 0 ABS 0 sfr2 -
-__Lsfr3 4C 0 ABS 0 sfr3 -
+__Lsfr0 4A 0 ABS 0 sfr0 -
+__Lsfr1 4A 0 ABS 0 sfr1 -
+__Lsfr2 4A 0 ABS 0 sfr2 -
+__Lsfr3 4A 0 ABS 0 sfr3 -
 __Lsivt 14 0 CODE 0 sivt -
-__Ltext 4C 0 ABS 0 text -
-___bmul 440 0 CODE 0 text4 dist/default/debug\score.X.debug.o
-__LcstackBANK0 4C 0 ABS 0 cstackBANK0 -
-__HcstackCOMMON 4C 0 ABS 0 cstackCOMMON -
-__end_of_checkButtons 1C4 0 CODE 0 text7 dist/default/debug\score.X.debug.o
+__Ltext 4A 0 ABS 0 text -
+___bmul 44A 0 CODE 0 text4 dist/default/debug\score.X.debug.o
+__LcstackBANK0 4A 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 4A 0 ABS 0 cstackCOMMON -
+__end_of_checkButtons 1C2 0 CODE 0 text7 dist/default/debug\score.X.debug.o
 _GIE 5F 0 ABS 0 - dist/default/debug\score.X.debug.o
-__S0 280 0 ABS 0 - -
+__S0 285 0 ABS 0 - -
 __S1 7C 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 228 0 CODE 0 text15 dist/default/debug\score.X.debug.o
-_up1 4B0 0 CODE 0 text13 dist/default/debug\score.X.debug.o
-_up2 490 0 CODE 0 text12 dist/default/debug\score.X.debug.o
-_win 2CE 0 CODE 0 text14 dist/default/debug\score.X.debug.o
-_button 7A 0 COMMON 1 bssCOMMON dist/default/debug\score.X.debug.o
+_isr 226 0 CODE 0 text15 dist/default/debug\score.X.debug.o
+_up1 4BA 0 CODE 0 text13 dist/default/debug\score.X.debug.o
+_up2 49A 0 CODE 0 text12 dist/default/debug\score.X.debug.o
+_win 31E 0 CODE 0 text14 dist/default/debug\score.X.debug.o
+_button 7B 0 COMMON 1 bssCOMMON dist/default/debug\score.X.debug.o
 saved_w 7E 0 ABS 0 - dist/default/debug\score.X.debug.o
-_change 3E4 0 CODE 0 text9 dist/default/debug\score.X.debug.o
-__end_of_isr 27C 0 CODE 0 text15 dist/default/debug\score.X.debug.o
-__end_of_up1 4D0 0 CODE 0 text13 dist/default/debug\score.X.debug.o
-__end_of_up2 4B0 0 CODE 0 text12 dist/default/debug\score.X.debug.o
-__end_of_win 31E 0 CODE 0 text14 dist/default/debug\score.X.debug.o
+_change 3EE 0 CODE 0 text9 dist/default/debug\score.X.debug.o
+__end_of_isr 27A 0 CODE 0 text15 dist/default/debug\score.X.debug.o
+__end_of_up1 4DA 0 CODE 0 text13 dist/default/debug\score.X.debug.o
+__end_of_up2 4BA 0 CODE 0 text12 dist/default/debug\score.X.debug.o
+__end_of_win 36E 0 CODE 0 text14 dist/default/debug\score.X.debug.o
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab 414 0 STRING 0 strings dist/default/debug\score.X.debug.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-__fptable 34 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
-__LbssBANK0 4C 0 ABS 0 bssBANK0 -
+__stringtab 41E 0 STRING 0 strings dist/default/debug\score.X.debug.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+__fptable 32 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
+__LbssBANK0 4A 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/debug\score.X.debug.o
-__end_of__fptable 4C 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
-__ptext10 4D0 0 CODE 0 text10 dist/default/debug\score.X.debug.o
-__ptext11 4E8 0 CODE 0 text11 dist/default/debug\score.X.debug.o
-__ptext12 490 0 CODE 0 text12 dist/default/debug\score.X.debug.o
-__ptext13 4B0 0 CODE 0 text13 dist/default/debug\score.X.debug.o
-__ptext14 2CE 0 CODE 0 text14 dist/default/debug\score.X.debug.o
-__ptext15 228 0 CODE 0 text15 dist/default/debug\score.X.debug.o
-___awdiv 4C 0 CODE 0 text5 dist/default/debug\score.X.debug.o
-__end_of_calcDigit 228 0 CODE 0 text3 dist/default/debug\score.X.debug.o
-__pmaintext 46A 0 CODE 0 maintext dist/default/debug\score.X.debug.o
-__Lcommon 4C 0 ABS 0 common -
+__end_of__fptable 4A 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
+__ptext10 4DA 0 CODE 0 text10 dist/default/debug\score.X.debug.o
+__ptext11 4F2 0 CODE 0 text11 dist/default/debug\score.X.debug.o
+__ptext12 49A 0 CODE 0 text12 dist/default/debug\score.X.debug.o
+__ptext13 4BA 0 CODE 0 text13 dist/default/debug\score.X.debug.o
+__ptext14 31E 0 CODE 0 text14 dist/default/debug\score.X.debug.o
+__ptext15 226 0 CODE 0 text15 dist/default/debug\score.X.debug.o
+___awdiv 4A 0 CODE 0 text5 dist/default/debug\score.X.debug.o
+__end_of_calcDigit 226 0 CODE 0 text3 dist/default/debug\score.X.debug.o
+__pmaintext 474 0 CODE 0 maintext dist/default/debug\score.X.debug.o
+__Lcommon 4A 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 change@aux 72 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
-_timers 30 0 BANK0 1 bssBANK0 dist/default/debug\score.X.debug.o
-_calcDigit 1C4 0 CODE 0 text3 dist/default/debug\score.X.debug.o
+_timers 31 0 BANK0 1 bssBANK0 dist/default/debug\score.X.debug.o
+_calcDigit 1C2 0 CODE 0 text3 dist/default/debug\score.X.debug.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/debug\score.X.debug.o
-__end_of__stringtab 420 0 STRING 0 strings dist/default/debug\score.X.debug.o
+__end_of__stringtab 42A 0 STRING 0 strings dist/default/debug\score.X.debug.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/debug\score.X.debug.o
-__HcstackBANK0 4C 0 ABS 0 cstackBANK0 -
+__pbssCOMMON 7B 0 COMMON 1 bssCOMMON dist/default/debug\score.X.debug.o
+__HcstackBANK0 4A 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/debug\score.X.debug.o
 __Lend_init 14 0 CODE 0 end_init -
-__LcstackCOMMON 4C 0 ABS 0 cstackCOMMON -
-end_of_initialization 30 0 CODE 0 cinit dist/default/debug\score.X.debug.o
+__LcstackCOMMON 4A 0 ABS 0 cstackCOMMON -
+end_of_initialization 2E 0 CODE 0 cinit dist/default/debug\score.X.debug.o
 __Hintentry 14 0 CODE 0 intentry -
-fptable 34 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
+fptable 32 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
 fptotal C 0 ABS 0 - dist/default/debug\score.X.debug.o
-__Lstrings 4C 0 ABS 0 strings -
+__Lstrings 4A 0 ABS 0 strings -
 ___awdiv@quotient 78 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 ?___awdiv 72 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 __Hreset_vec 2 0 CODE 0 reset_vec -
-__HbssBANK0 4C 0 ABS 0 bssBANK0 -
-__ptext1 36A 0 CODE 0 text1 dist/default/debug\score.X.debug.o
-__ptext2 27C 0 CODE 0 text2 dist/default/debug\score.X.debug.o
-__ptext3 1C4 0 CODE 0 text3 dist/default/debug\score.X.debug.o
-__ptext4 440 0 CODE 0 text4 dist/default/debug\score.X.debug.o
-__ptext5 4C 0 CODE 0 text5 dist/default/debug\score.X.debug.o
-__ptext6 3B4 0 CODE 0 text6 dist/default/debug\score.X.debug.o
-__ptext7 11A 0 CODE 0 text7 dist/default/debug\score.X.debug.o
-__ptext8 31E 0 CODE 0 text8 dist/default/debug\score.X.debug.o
-__ptext9 3E4 0 CODE 0 text9 dist/default/debug\score.X.debug.o
-_updateDisplay 36A 0 CODE 0 text1 dist/default/debug\score.X.debug.o
+__HbssBANK0 4A 0 ABS 0 bssBANK0 -
+__ptext1 27A 0 CODE 0 text1 dist/default/debug\score.X.debug.o
+__ptext2 2CC 0 CODE 0 text2 dist/default/debug\score.X.debug.o
+__ptext3 1C2 0 CODE 0 text3 dist/default/debug\score.X.debug.o
+__ptext4 44A 0 CODE 0 text4 dist/default/debug\score.X.debug.o
+__ptext5 4A 0 CODE 0 text5 dist/default/debug\score.X.debug.o
+__ptext6 3BC 0 CODE 0 text6 dist/default/debug\score.X.debug.o
+__ptext7 118 0 CODE 0 text7 dist/default/debug\score.X.debug.o
+__ptext8 36E 0 CODE 0 text8 dist/default/debug\score.X.debug.o
+__ptext9 3EE 0 CODE 0 text9 dist/default/debug\score.X.debug.o
+_updateDisplay 27A 0 CODE 0 text1 dist/default/debug\score.X.debug.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-___heap_lo 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-__end_of__initialization 30 0 CODE 0 cinit dist/default/debug\score.X.debug.o
-__Lfunctab 34 0 ENTRY 0 functab -
-_checkButton 31E 0 CODE 0 text8 dist/default/debug\score.X.debug.o
-__Lclrtext 4C 0 ABS 0 clrtext -
+___heap_hi 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+__end_of__initialization 2E 0 CODE 0 cinit dist/default/debug\score.X.debug.o
+__Lfunctab 32 0 ENTRY 0 functab -
+_checkButton 36E 0 CODE 0 text8 dist/default/debug\score.X.debug.o
+__Lclrtext 4A 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
 __Hend_init 16 0 CODE 0 end_init -
-__end_of_main 490 0 CODE 0 maintext dist/default/debug\score.X.debug.o
-_calcDigit$241 24 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
-__end_of_down1 500 0 CODE 0 text11 dist/default/debug\score.X.debug.o
-__end_of_down2 4E8 0 CODE 0 text10 dist/default/debug\score.X.debug.o
+__end_of_main 49A 0 CODE 0 maintext dist/default/debug\score.X.debug.o
+_calcDigit$237 22 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
+__end_of_down1 50A 0 CODE 0 text11 dist/default/debug\score.X.debug.o
+__end_of_down2 4F2 0 CODE 0 text10 dist/default/debug\score.X.debug.o
 _PORTB 6 0 ABS 0 - dist/default/debug\score.X.debug.o
 _PORTC 7 0 ABS 0 - dist/default/debug\score.X.debug.o
 _T1CON 10 0 ABS 0 - dist/default/debug\score.X.debug.o
 _TRISA 85 0 ABS 0 - dist/default/debug\score.X.debug.o
 _TRISB 86 0 ABS 0 - dist/default/debug\score.X.debug.o
 _TRISC 87 0 ABS 0 - dist/default/debug\score.X.debug.o
-__end_of_setup 3E4 0 CODE 0 text6 dist/default/debug\score.X.debug.o
-__Hram 4C 0 ABS 0 ram -
-__Lram 4C 0 ABS 0 ram -
+__end_of_setup 3EE 0 CODE 0 text6 dist/default/debug\score.X.debug.o
+__Hram 4A 0 ABS 0 ram -
+__Lram 4A 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/debug\score.X.debug.o
-_down1 4E8 0 CODE 0 text11 dist/default/debug\score.X.debug.o
-_down2 4D0 0 CODE 0 text10 dist/default/debug\score.X.debug.o
-_score 2B 0 BANK0 1 bssBANK0 dist/default/debug\score.X.debug.o
-_setup 3B4 0 CODE 0 text6 dist/default/debug\score.X.debug.o
+_down1 4F2 0 CODE 0 text11 dist/default/debug\score.X.debug.o
+_down2 4DA 0 CODE 0 text10 dist/default/debug\score.X.debug.o
+_score 2C 0 BANK0 1 bssBANK0 dist/default/debug\score.X.debug.o
+_setup 3BC 0 CODE 0 text6 dist/default/debug\score.X.debug.o
 __pintentry 8 0 CODE 0 intentry dist/default/debug\score.X.debug.o
-calcDigit@digit 20 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
-calcDigit@value 26 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
+calcDigit@dozen 7A 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
+calcDigit@value 25 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
 __initialization 16 0 CODE 0 cinit dist/default/debug\score.X.debug.o
 ___bmul@product 73 0 COMMON 1 cstackCOMMON dist/default/debug\score.X.debug.o
-__pbssBANK0 2B 0 BANK0 1 bssBANK0 dist/default/debug\score.X.debug.o
-calcDigit@d 27 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
-calcDigit@u 23 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
-__end_of_DIGITS 440 0 STRING 0 strings dist/default/debug\score.X.debug.o
-__pstrings 414 0 STRING 0 strings dist/default/debug\score.X.debug.o
-fpbase 3E 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
-___int_stack_hi 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
-___int_stack_lo 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\driver_tmp_12.o
+__pbssBANK0 2C 0 BANK0 1 bssBANK0 dist/default/debug\score.X.debug.o
+calcDigit@d 26 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
+calcDigit@u 24 0 BANK0 1 cstackBANK0 dist/default/debug\score.X.debug.o
+__end_of_DIGITS 44A 0 STRING 0 strings dist/default/debug\score.X.debug.o
+__pstrings 41E 0 STRING 0 strings dist/default/debug\score.X.debug.o
+fpbase 3C 0 ENTRY 0 functab dist/default/debug\score.X.debug.o
+___int_stack_hi 4A 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
+___int_stack_lo 4A 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcAs2ng.\driver_tmp_12.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -515,14 +519,14 @@ ___int_stack_lo 4C 0 STACK 2 stack C:\Users\israel\AppData\Local\Temp\xcBscvk.1\
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text4 0 220 440 60 2
-text5 0 26 4C 1E4 2
+text4 0 225 44A 60 2
+text5 0 25 4A 1EA 2
 cstackCOMMON 1 70 70 C 1
-cstackBANK0 1 20 20 14 1
-intentry 0 4 8 16 2
+cstackBANK0 1 20 20 15 1
+intentry 0 4 8 15 2
 reset_vec 0 0 0 1 2
-strings 0 20A 414 16 2
-functab 0 1A 34 C 2
+strings 0 20F 41E 16 2
+functab 0 19 32 C 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

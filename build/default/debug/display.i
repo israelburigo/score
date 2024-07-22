@@ -1365,10 +1365,9 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
 # 18 "./defines.h" 2
-# 37 "./defines.h"
+# 44 "./defines.h"
 struct BUTTON {
     char status;
-    char btn;
 };
 
 const char DIGITS[] = {
@@ -1381,16 +1380,16 @@ const char DIGITS[] = {
 };
 
 const char NUMBERS[] = {
-    0b00111111,
-    0b00000110,
-    0b01011011,
-    0b01001111,
-    0b01100110,
-    0b01101101,
-    0b01111101,
-    0b00000111,
-    0b01111111,
-    0b01001111
+    0b01111110,
+    0b00001100,
+    0b10110110,
+    0b10011110,
+    0b11001100,
+    0b11011010,
+    0b11111010,
+    0b00001110,
+    0b11111110,
+    0b10011110
 };
 
 void checkButtons(void);
@@ -1411,10 +1410,10 @@ volatile unsigned int timers[2];
 # 1 "display.c" 2
 
 
-char calcDigit(signed char value, char digit) {
+char calcDigit(signed char value, char dozen) {
     char d = (char)value / 10;
     char u = (char)value - d * 10;
-    return score.digit == digit ? d : u;
+    return score.digit == dozen ? d : u;
 }
 
 char getNumber() {
@@ -1427,10 +1426,13 @@ char getNumber() {
 
 void updateDisplay(void) {
     if (timers[0]) return;
-    timers[0] = 100;
+    timers[0] = 10;
 
-    if (++score.digit > 6) score.digit = 0;
+    if (++score.digit > 5) score.digit = 0;
 
-    PORTB = NUMBERS[getNumber()];
-    PORTC = DIGITS[score.digit];
+    char number = NUMBERS[getNumber()];
+    char digit = DIGITS[score.digit];
+
+    PORTC = digit;
+    PORTB = number;
 }

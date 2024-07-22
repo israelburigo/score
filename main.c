@@ -1,9 +1,9 @@
 #include "defines.h"
 
 void setup() {
-    TRISA = 0xFF;
-    TRISB = 0x00;
-    TRISC = 0x00;
+    TRISA = SET_TRISA;
+    TRISB = SET_TRISB;
+    TRISC = SET_TRISC;
     PORTB = 0;
     PORTC = 0;
 
@@ -14,19 +14,31 @@ void setup() {
     ADCON0 = 0;
     ADCON1bits.PCFG = 0b0110;
 
+    OPTION_REGbits.nRBPU = 0;
+    OPTION_REGbits.INTEDG = 0;
+
+    INTCONbits.INTE = 1;
     PIE1bits.TMR1IE = 1;
     PEIE = 1;
     GIE = 1;
+    
+    rxClocks = 0;
 }
 
 void main(void) {
 
     setup();
-    
+
     __delay_ms(500);
 
     while (1) {
         checkButtons();
         updateDisplay();
+        if (tmCLOCK == 0 && rxClocks > 0) {
+            LED_RX = 0;
+            if (rxClocks > 200) up2();
+            else up1();
+            rxClocks = 0;
+        }
     }
 }

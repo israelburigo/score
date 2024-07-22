@@ -19,6 +19,13 @@
 
 #define _XTAL_FREQ 12800000L
 
+#define SET_TRISA 0b11111111
+#define SET_TRISB 0b00000001
+#define SET_TRISC 0b00000000
+
+#define RX_INPUT PORTBbits.RB0
+#define LED_RX  PORTCbits.RC7
+
 #define BTN_UP1 PORTAbits.RA0
 #define BTN_DOWN1 PORTAbits.RA1
 #define BTN_UP2 PORTAbits.RA2
@@ -30,7 +37,8 @@
 #define BUTTON_STATUS_PRESSED 1
 
 #define TIME_100ms 100
-#define TIME_5ms 500
+#define TIME_10ms 10
+#define TIME_300ms 300
 
 #define checkZero(x) !(x || x)
 
@@ -48,20 +56,22 @@ const char DIGITS[] = {
 };
 
 const char NUMBERS[] = {
-    0b00111111,
-    0b00000110,
-    0b01011011,
-    0b01001111,
-    0b01100110,
-    0b01101101,
-    0b01111101,
-    0b00000111,
-    0b01111111,
-    0b01001111
+    0b01111110,
+    0b00001100,
+    0b10110110,
+    0b10011110,
+    0b11001100,
+    0b11011010,
+    0b11111010,
+    0b00001110,
+    0b11111110,
+    0b10011110
 };
 
 void checkButtons(void);
 void updateDisplay(void);
+void up1(void);
+void up2(void);
 
 struct SCORE {
     signed char team1;
@@ -74,10 +84,12 @@ struct SCORE {
 struct SCORE score;
 struct BUTTON button;
 
-volatile unsigned int timers[2];
+volatile unsigned int rxClocks;
+volatile unsigned int timers[3];
 
 #define tmDISPLAY timers[0]
 #define tmBUTTON timers[1]
+#define tmCLOCK timers[2]
 
 #endif
 

@@ -41,21 +41,23 @@
 [v _isr isr `II(v  1 e 1 0 ]
 "3 C:\Users\israel\MPLABXProjects\score.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
-"22
+"28
 [v _main main `(v  1 e 1 0 ]
-"41 C:\Users\israel\MPLABXProjects\score.X/defines.h
+"49 C:\Users\israel\MPLABXProjects\score.X/defines.h
 [v _DIGITS DIGITS `DC[6]uc  1 e 6 0 ]
-"50
+"58
 [v _NUMBERS NUMBERS `DC[10]uc  1 e 10 0 ]
 [s S22 SCORE 5 `c 1 team1 1 0 `c 1 team2 1 1 `uc 1 win1 1 2 `uc 1 win2 1 3 `uc 1 digit 1 4 ]
-"74
+"84
 [v _score score `S22  1 e 5 0 ]
 [s S28 BUTTON 1 `uc 1 status 1 0 ]
-"75
+"85
 [v _button button `S28  1 e 1 0 ]
-"77
-[v _timers timers `VE[2]ui  1 e 4 0 ]
-[s S175 . 1 `uc 1 RA0 1 0 :1:0 
+"87
+[v _rxClocks rxClocks `VEui  1 e 2 0 ]
+"88
+[v _timers timers `VE[3]ui  1 e 6 0 ]
+[s S285 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -63,13 +65,42 @@
 `uc 1 RA5 1 0 :1:5 
 ]
 "181 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
-[u S182 . 1 `S175 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES182  1 e 1 @5 ]
+[u S292 . 1 `S285 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES292  1 e 1 @5 ]
 "216
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S252 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S190 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"295
+[u S199 . 1 `S190 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES199  1 e 1 @7 ]
+[s S123 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"383
+[s S132 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S137 . 1 `S123 1 . 1 0 `S132 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES137  1 e 1 @11 ]
+[s S394 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -78,8 +109,8 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "454
-[u S260 . 1 `S252 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES260  1 e 1 @12 ]
+[u S402 . 1 `S394 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES402  1 e 1 @12 ]
 "510
 [v _TMR1 TMR1 `VEus  1 e 2 @14 ]
 "531
@@ -105,13 +136,27 @@
 [v _T1CONbits T1CONbits `VES52  1 e 1 @16 ]
 "881
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S97 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"997
+[s S104 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S108 . 1 `S97 1 . 1 0 `S104 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES108  1 e 1 @129 ]
 "1047
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1097
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1159
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S97 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S155 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -120,8 +165,8 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1237
-[u S105 . 1 `S97 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES105  1 e 1 @140 ]
+[u S163 . 1 `S155 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES163  1 e 1 @140 ]
 [s S75 . 1 `uc 1 PCFG 1 0 :4:0 
 `uc 1 . 1 0 :3:4 
 `uc 1 ADFM 1 0 :1:7 
@@ -138,19 +183,19 @@
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "1692
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"22 C:\Users\israel\MPLABXProjects\score.X\main.c
+"28 C:\Users\israel\MPLABXProjects\score.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"32
+"44
 } 0
 "17 C:\Users\israel\MPLABXProjects\score.X\display.c
 [v _updateDisplay updateDisplay `(v  1 e 1 0 ]
 {
-"24
-[v updateDisplay@digit digit `uc  1 a 1 8 ]
 "23
+[v updateDisplay@digit digit `uc  1 a 1 8 ]
+"22
 [v updateDisplay@number number `uc  1 a 1 7 ]
-"28
+"27
 } 0
 "9
 [v _getNumber getNumber `(uc  1 e 1 0 ]
@@ -200,7 +245,7 @@
 "3 C:\Users\israel\MPLABXProjects\score.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"20
+"26
 } 0
 "45 C:\Users\israel\MPLABXProjects\score.X\buttons.c
 [v _checkButtons checkButtons `(v  1 e 1 0 ]
@@ -233,15 +278,15 @@
 {
 "25
 } 0
-"19
-[v _up2 up2 `(v  1 e 1 0 ]
-{
-"21
-} 0
 "15
 [v _up1 up1 `(v  1 e 1 0 ]
 {
 "17
+} 0
+"19
+[v _up2 up2 `(v  1 e 1 0 ]
+{
+"21
 } 0
 "38
 [v _win win `(v  1 e 1 0 ]
@@ -251,5 +296,5 @@
 "3 C:\Users\israel\MPLABXProjects\score.X\interrupt.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"10
+"16
 } 0
