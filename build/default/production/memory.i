@@ -1,4 +1,4 @@
-# 1 "interrupt.c"
+# 1 "memory.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "interrupt.c" 2
+# 1 "memory.c" 2
 # 1 "./defines.h" 1
 
 
@@ -1365,9 +1365,11 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
 # 18 "./defines.h" 2
-# 44 "./defines.h"
+# 49 "./defines.h"
 struct BUTTON {
     char status;
+    char btn;
+    volatile unsigned int pressTime;
 };
 
 const char DIGITS[] = {
@@ -1389,11 +1391,15 @@ const char NUMBERS[] = {
     0b11111010,
     0b00001110,
     0b11111110,
-    0b10011110
+    0b11001110
 };
 
 void checkButtons(void);
 void updateDisplay(void);
+void up1(void);
+void up2(void);
+void saveMemory(void);
+void loadMemory(void);
 
 struct SCORE {
     signed char team1;
@@ -1405,16 +1411,34 @@ struct SCORE {
 
 struct SCORE score;
 struct BUTTON button;
+char isSaveMemory;
 
-volatile unsigned int timers[2];
-# 1 "interrupt.c" 2
+volatile unsigned int rxClocks;
+volatile unsigned int timers[5];
+# 1 "memory.c" 2
 
 
-void __attribute__((picinterrupt(("")))) isr() {
-    if (PIR1bits.TMR1IF) {
-        PIR1bits.TMR1IF = 0;
-        if (timers[0]) timers[0]--;
-        if (timers[1]) timers[1]--;
-        TMR1 = 65535 - 3200;
-    }
+void updateMemory(char addr, char value) {
+    char mem = ( EEADR = addr, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+    if (mem == value) return;
+    do{ while (EECON1bits.WR) { continue; } EEADR = (addr); EEDATA = (value); EECON1 &= 0x3F; STATUSbits.CARRY = 0; if (INTCONbits.GIE) { STATUSbits.CARRY = 1; } INTCONbits.GIE = 0; EECON1bits.WREN = 1; EECON2 = 0x55; EECON2 = 0xAA; EECON1bits.WR = 1; EECON1bits.WREN = 0; if (STATUSbits.CARRY) { INTCONbits.GIE = 1; } } while (0);
+}
+
+void saveMemory(void) {
+    updateMemory(0x00, (char) score.team1);
+    updateMemory(0x01, (char) score.team2);
+    updateMemory(0x02, score.win1);
+    updateMemory(0x03, score.win2);
+}
+
+void loadMemory(void) {
+    score.team1 = (signed char) ( EEADR = 0x00, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+    score.team2 = (signed char) ( EEADR = 0x01, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+    score.win1 = ( EEADR = 0x02, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+    score.win2 = ( EEADR = 0x03, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+
+    if (score.team1 == -1)score.team1 = 0;
+    if (score.team2 == -1)score.team1 = 0;
+    if (score.win1 == 0xff)score.win1 = 0;
+    if (score.win2 == 0xff)score.win2 = 0;
 }

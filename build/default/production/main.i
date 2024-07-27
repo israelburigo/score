@@ -1365,9 +1365,11 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
 # 18 "./defines.h" 2
-# 45 "./defines.h"
+# 49 "./defines.h"
 struct BUTTON {
     char status;
+    char btn;
+    volatile unsigned int pressTime;
 };
 
 const char DIGITS[] = {
@@ -1389,13 +1391,15 @@ const char NUMBERS[] = {
     0b11111010,
     0b00001110,
     0b11111110,
-    0b10011110
+    0b11001110
 };
 
 void checkButtons(void);
 void updateDisplay(void);
 void up1(void);
 void up2(void);
+void saveMemory(void);
+void loadMemory(void);
 
 struct SCORE {
     signed char team1;
@@ -1407,9 +1411,10 @@ struct SCORE {
 
 struct SCORE score;
 struct BUTTON button;
+char isSaveMemory;
 
 volatile unsigned int rxClocks;
-volatile unsigned int timers[3];
+volatile unsigned int timers[5];
 # 1 "main.c" 2
 
 
@@ -1444,6 +1449,12 @@ void main(void) {
 
     _delay((unsigned long)((500)*(12800000L/4000.0)));
 
+    score.team1 = 0;
+    score.team2 = 0;
+
+    loadMemory();
+    isSaveMemory = 0;
+
     while (1) {
         checkButtons();
         updateDisplay();
@@ -1452,6 +1463,12 @@ void main(void) {
             if (rxClocks > 200) up2();
             else up1();
             rxClocks = 0;
+            timers[3] = 3000;
+        }
+
+        if(isSaveMemory && timers[4] == 0){
+            isSaveMemory = 0;
+            saveMemory();
         }
     }
 }

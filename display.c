@@ -16,7 +16,7 @@ char getNumber() {
 
 void updateDisplay(void) {
     if (tmDISPLAY) return;
-    tmDISPLAY = TIME_10ms;
+    tmDISPLAY = TIME_2ms;
 
     if (++score.digit > 5) score.digit = 0;
     char number = NUMBERS[getNumber()];

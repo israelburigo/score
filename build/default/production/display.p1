@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"76 ./defines.h
-[; ;./defines.h: 76: struct SCORE {
+"84 ./defines.h
+[; ;./defines.h: 84: struct SCORE {
 [s S71 `c 1 `c 1 `uc 1 `uc 1 `uc 1 ]
 [n S71 SCORE team1 team2 win1 win2 digit ]
-"45
-[; ;./defines.h: 45: struct BUTTON {
-[s S70 `uc 1 ]
-[n S70 BUTTON status ]
+"49
+[; ;./defines.h: 49: struct BUTTON {
+[s S70 `uc 1 `uc 1 `Vui 1 ]
+[n S70 BUTTON status btn pressTime ]
 "278 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
@@ -164,8 +164,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1557
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1557: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"49 ./defines.h
-[; ;./defines.h: 49: const char DIGITS[] = {
+"55 ./defines.h
+[; ;./defines.h: 55: const char DIGITS[] = {
 [v _DIGITS `Cuc ~T0 @X0 -> 6 `i e ]
 [i _DIGITS
 :U ..
@@ -177,8 +177,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 31 `i `uc
 ..
 ]
-"58
-[; ;./defines.h: 58: const char NUMBERS[] = {
+"64
+[; ;./defines.h: 64: const char NUMBERS[] = {
 [v _NUMBERS `Cuc ~T0 @X0 -> 10 `i e ]
 [i _NUMBERS
 :U ..
@@ -191,21 +191,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 250 `i `uc
 -> -> 14 `i `uc
 -> -> 254 `i `uc
--> -> 158 `i `uc
+-> -> 206 `i `uc
 ..
 ]
-"84
-[; ;./defines.h: 84: struct SCORE score;
+"92
+[; ;./defines.h: 92: struct SCORE score;
 [v _score `S71 ~T0 @X0 1 e ]
-"85
-[; ;./defines.h: 85: struct BUTTON button;
+"93
+[; ;./defines.h: 93: struct BUTTON button;
 [v _button `S70 ~T0 @X0 1 e ]
-"87
-[; ;./defines.h: 87: volatile unsigned int rxClocks;
+"94
+[; ;./defines.h: 94: char isSaveMemory;
+[v _isSaveMemory `uc ~T0 @X0 1 e ]
+"96
+[; ;./defines.h: 96: volatile unsigned int rxClocks;
 [v _rxClocks `Vui ~T0 @X0 1 e ]
-"88
-[; ;./defines.h: 88: volatile unsigned int timers[3];
-[v _timers `Vui ~T0 @X0 -> 3 `i e ]
+"97
+[; ;./defines.h: 97: volatile unsigned int timers[5];
+[v _timers `Vui ~T0 @X0 -> 5 `i e ]
 "3 display.c
 [; ;display.c: 3: char calcDigit(signed char value, char dozen) {
 [v _calcDigit `(uc ~T0 @X0 1 ef2`c`uc ]
@@ -280,8 +283,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 78  ]
 [e :U 79 ]
 "19
-[; ;display.c: 19:     timers[0] = 10;
-[e = *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 10 `i `ui ]
+[; ;display.c: 19:     timers[0] = 2;
+[e = *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 2 `i `ui ]
 "21
 [; ;display.c: 21:     if (++score.digit > 5) score.digit = 0;
 [e $ ! > -> =+ . _score 4 -> -> 1 `i `uc `i -> 5 `i 80  ]

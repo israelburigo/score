@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"76 ./defines.h
-[; ;./defines.h: 76: struct SCORE {
+"84 ./defines.h
+[; ;./defines.h: 84: struct SCORE {
 [s S71 `c 1 `c 1 `uc 1 `uc 1 `uc 1 ]
 [n S71 SCORE team1 team2 win1 win2 digit ]
-"45
-[; ;./defines.h: 45: struct BUTTON {
-[s S70 `uc 1 ]
-[n S70 BUTTON status ]
+"49
+[; ;./defines.h: 49: struct BUTTON {
+[s S70 `uc 1 `uc 1 `Vui 1 ]
+[n S70 BUTTON status btn pressTime ]
 "1047 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1047: extern volatile unsigned char TRISA __attribute__((address(0x085)));
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
@@ -118,11 +118,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF164 ~T0 @X0 0 e ]
 [p i __delay ]
-"71 ./defines.h
-[; ;./defines.h: 71: void checkButtons(void);
+"82 ./defines.h
+[; ;./defines.h: 82: void loadMemory(void);
+[v _loadMemory `(v ~T0 @X0 0 ef ]
+"77
+[; ;./defines.h: 77: void checkButtons(void);
 [v _checkButtons `(v ~T0 @X0 0 ef ]
-"72
-[; ;./defines.h: 72: void updateDisplay(void);
+"78
+[; ;./defines.h: 78: void updateDisplay(void);
 [v _updateDisplay `(v ~T0 @X0 0 ef ]
 "284 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 284:     struct {
@@ -135,12 +138,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "295
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 295: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
 [v _PORTCbits `VS13 ~T0 @X0 0 e@7 ]
-"74 ./defines.h
-[; ;./defines.h: 74: void up2(void);
+"80 ./defines.h
+[; ;./defines.h: 80: void up2(void);
 [v _up2 `(v ~T0 @X0 0 ef ]
-"73
-[; ;./defines.h: 73: void up1(void);
+"79
+[; ;./defines.h: 79: void up1(void);
 [v _up1 `(v ~T0 @X0 0 ef ]
+"81
+[; ;./defines.h: 81: void saveMemory(void);
+[v _saveMemory `(v ~T0 @X0 0 ef ]
 "6 ./defines.h
 [p x FOSC  =  HS         ]
 "7
@@ -292,8 +298,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1557
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1557: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"49 ./defines.h
-[; ;./defines.h: 49: const char DIGITS[] = {
+"55 ./defines.h
+[; ;./defines.h: 55: const char DIGITS[] = {
 [v _DIGITS `Cuc ~T0 @X0 -> 6 `i e ]
 [i _DIGITS
 :U ..
@@ -305,8 +311,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 31 `i `uc
 ..
 ]
-"58
-[; ;./defines.h: 58: const char NUMBERS[] = {
+"64
+[; ;./defines.h: 64: const char NUMBERS[] = {
 [v _NUMBERS `Cuc ~T0 @X0 -> 10 `i e ]
 [i _NUMBERS
 :U ..
@@ -319,21 +325,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 250 `i `uc
 -> -> 14 `i `uc
 -> -> 254 `i `uc
--> -> 158 `i `uc
+-> -> 206 `i `uc
 ..
 ]
-"84
-[; ;./defines.h: 84: struct SCORE score;
+"92
+[; ;./defines.h: 92: struct SCORE score;
 [v _score `S71 ~T0 @X0 1 e ]
-"85
-[; ;./defines.h: 85: struct BUTTON button;
+"93
+[; ;./defines.h: 93: struct BUTTON button;
 [v _button `S70 ~T0 @X0 1 e ]
-"87
-[; ;./defines.h: 87: volatile unsigned int rxClocks;
+"94
+[; ;./defines.h: 94: char isSaveMemory;
+[v _isSaveMemory `uc ~T0 @X0 1 e ]
+"96
+[; ;./defines.h: 96: volatile unsigned int rxClocks;
 [v _rxClocks `Vui ~T0 @X0 1 e ]
-"88
-[; ;./defines.h: 88: volatile unsigned int timers[3];
-[v _timers `Vui ~T0 @X0 -> 3 `i e ]
+"97
+[; ;./defines.h: 97: volatile unsigned int timers[5];
+[v _timers `Vui ~T0 @X0 -> 5 `i e ]
 "3 main.c
 [; ;main.c: 3: void setup() {
 [v _setup `(v ~T0 @X0 1 ef ]
@@ -409,46 +418,75 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 32:     _delay((unsigned long)((500)*(12800000L/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 12800000 `l `d .4000.0 `ul ]
 "34
-[; ;main.c: 34:     while (1) {
+[; ;main.c: 34:     score.team1 = 0;
+[e = . _score 0 -> -> 0 `i `c ]
+"35
+[; ;main.c: 35:     score.team2 = 0;
+[e = . _score 1 -> -> 0 `i `c ]
+"37
+[; ;main.c: 37:     loadMemory();
+[e ( _loadMemory ..  ]
+"38
+[; ;main.c: 38:     isSaveMemory = 0;
+[e = _isSaveMemory -> -> 0 `i `uc ]
+"40
+[; ;main.c: 40:     while (1) {
 [e :U 75 ]
 {
-"35
-[; ;main.c: 35:         checkButtons();
+"41
+[; ;main.c: 41:         checkButtons();
 [e ( _checkButtons ..  ]
-"36
-[; ;main.c: 36:         updateDisplay();
+"42
+[; ;main.c: 42:         updateDisplay();
 [e ( _updateDisplay ..  ]
-"37
-[; ;main.c: 37:         if (timers[2] == 0 && rxClocks > 0) {
+"43
+[; ;main.c: 43:         if (timers[2] == 0 && rxClocks > 0) {
 [e $ ! && == *U + &U _timers * -> -> -> 2 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui > _rxClocks -> -> 0 `i `ui 77  ]
 {
-"38
-[; ;main.c: 38:             PORTCbits.RC7 = 0;
+"44
+[; ;main.c: 44:             PORTCbits.RC7 = 0;
 [e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
-"39
-[; ;main.c: 39:             if (rxClocks > 200) up2();
+"45
+[; ;main.c: 45:             if (rxClocks > 200) up2();
 [e $ ! > _rxClocks -> -> 200 `i `ui 78  ]
 [e ( _up2 ..  ]
 [e $U 79  ]
-"40
-[; ;main.c: 40:             else up1();
+"46
+[; ;main.c: 46:             else up1();
 [e :U 78 ]
 [e ( _up1 ..  ]
 [e :U 79 ]
-"41
-[; ;main.c: 41:             rxClocks = 0;
+"47
+[; ;main.c: 47:             rxClocks = 0;
 [e = _rxClocks -> -> 0 `i `ui ]
-"42
-[; ;main.c: 42:         }
+"48
+[; ;main.c: 48:             timers[3] = 3000;
+[e = *U + &U _timers * -> -> -> 3 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 3000 `i `ui ]
+"49
+[; ;main.c: 49:         }
 }
 [e :U 77 ]
-"43
-[; ;main.c: 43:     }
+"51
+[; ;main.c: 51:         if(isSaveMemory && timers[4] == 0){
+[e $ ! && != -> _isSaveMemory `i -> 0 `i == *U + &U _timers * -> -> -> 4 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 80  ]
+{
+"52
+[; ;main.c: 52:             isSaveMemory = 0;
+[e = _isSaveMemory -> -> 0 `i `uc ]
+"53
+[; ;main.c: 53:             saveMemory();
+[e ( _saveMemory ..  ]
+"54
+[; ;main.c: 54:         }
+}
+[e :U 80 ]
+"55
+[; ;main.c: 55:     }
 }
 [e :U 74 ]
 [e $U 75  ]
 [e :U 76 ]
-"44
-[; ;main.c: 44: }
+"56
+[; ;main.c: 56: }
 [e :UE 73 ]
 }

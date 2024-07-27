@@ -1365,9 +1365,11 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
 # 18 "./defines.h" 2
-# 45 "./defines.h"
+# 49 "./defines.h"
 struct BUTTON {
     char status;
+    char btn;
+    volatile unsigned int pressTime;
 };
 
 const char DIGITS[] = {
@@ -1389,13 +1391,15 @@ const char NUMBERS[] = {
     0b11111010,
     0b00001110,
     0b11111110,
-    0b10011110
+    0b11001110
 };
 
 void checkButtons(void);
 void updateDisplay(void);
 void up1(void);
 void up2(void);
+void saveMemory(void);
+void loadMemory(void);
 
 struct SCORE {
     signed char team1;
@@ -1407,38 +1411,65 @@ struct SCORE {
 
 struct SCORE score;
 struct BUTTON button;
+char isSaveMemory;
 
 volatile unsigned int rxClocks;
-volatile unsigned int timers[3];
+volatile unsigned int timers[5];
 # 1 "buttons.c" 2
 
 
-char checkButton(char btn, void (*action)(void)) {
+char onClick(char btn, void (*action)(void)) {
     if (!!(btn || btn)) return 0;
+    button.btn = btn;
     if (button.status == 1) {
         timers[1] = 100;
         return 1;
     }
-    if (timers[1])return 1;
-
+    if (timers[1]) return 1;
     action();
+    timers[1] = 100;
+    return 1;
+}
+
+char onPressed(char btn, void (*action)(void), unsigned int pressTime, void (*pressAction)(void)) {
+    if (!!(btn || btn)) return 0;
+    button.btn = btn;
+    if (button.status == 1) {
+        if (pressTime != 0 && button.pressTime > pressTime) {
+            pressAction();
+            button.pressTime = 0;
+        }
+        timers[1] = 100;
+        return 1;
+    }
+    if (timers[1]) return 1;
+    action();
+    timers[1] = 100;
     return 1;
 }
 
 void up1(void) {
     if (++score.team1 > 99) score.team1 = 99;
+    isSaveMemory = 1;
+    timers[4] = 5000;
 }
 
 void up2(void) {
     if (++score.team2 > 99) score.team2 = 99;
+    isSaveMemory = 1;
+    timers[4] = 5000;
 }
 
 void down1(void) {
     if (--score.team1 < 0) score.team1 = 0;
+    isSaveMemory = 1;
+    timers[4] = 5000;
 }
 
 void down2(void) {
     if (--score.team2 < 0) score.team2 = 0;
+    isSaveMemory = 1;
+    timers[4] = 5000;
 }
 
 void change(void) {
@@ -1446,6 +1477,14 @@ void change(void) {
     char aux = score.win1;
     score.win1 = score.win2;
     score.win2 = aux;
+    isSaveMemory = 1;
+    timers[4] = 5000;
+}
+
+void clear(void) {
+    score.win1 = score.win2 = 0;
+    score.team1 = score.team2 = 0;
+    saveMemory();
 }
 
 void win(void) {
@@ -1453,13 +1492,17 @@ void win(void) {
     if (score.team1 > score.team2) score.win1++;
     if (score.team2 > score.team1) score.win2++;
     score.team1 = score.team2 = 0;
+    saveMemory();
 }
 
 void checkButtons(void) {
-    button.status = checkButton(PORTAbits.RA0, up1)
-            || checkButton(PORTAbits.RA2, up2)
-            || checkButton(PORTAbits.RA1, down1)
-            || checkButton(PORTAbits.RA3, down2)
-            || checkButton(PORTAbits.RA4, change)
-            || checkButton(PORTAbits.RA5, win);
+    button.status = onClick(PORTAbits.RA0, up1)
+            || onClick(PORTAbits.RA2, up2)
+            || onClick(PORTAbits.RA1, down1)
+            || onClick(PORTAbits.RA3, down2)
+            || onPressed(PORTAbits.RA4, change, 3000, clear)
+            || onClick(PORTAbits.RA5, win);
+
+    if (button.status == 0)
+        button.pressTime = 0;
 }

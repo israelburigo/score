@@ -1,28 +1,69 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"73 ./defines.h
-[; ;./defines.h: 73: struct SCORE {
+"84 ./defines.h
+[; ;./defines.h: 84: struct SCORE {
 [s S71 `c 1 `c 1 `uc 1 `uc 1 `uc 1 ]
 [n S71 SCORE team1 team2 win1 win2 digit ]
-"44
-[; ;./defines.h: 44: struct BUTTON {
-[s S70 `uc 1 ]
-[n S70 BUTTON status ]
-[t ~ __interrupt . k ]
-[t T1 __interrupt ]
-"444 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 444:     struct {
-[s S21 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S21 . TMR1IF TMR2IF CCP1IF . TXIF RCIF ADIF ]
-"443
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 443: typedef union {
-[u S20 `S21 1 ]
-[n S20 . . ]
-"454
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 454: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
-[v _PIR1bits `VS20 ~T0 @X0 0 e@12 ]
-"510
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 510: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
-[v _TMR1 `Vus ~T0 @X0 0 e@14 ]
+"49
+[; ;./defines.h: 49: struct BUTTON {
+[s S70 `uc 1 `uc 1 `Vui 1 ]
+[n S70 BUTTON status btn pressTime ]
+"1489 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1489: extern volatile unsigned char EEADR __attribute__((address(0x10D)));
+[v _EEADR `Vuc ~T0 @X0 0 e@269 ]
+"1510
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1510: extern volatile unsigned char EECON1 __attribute__((address(0x18C)));
+[v _EECON1 `Vuc ~T0 @X0 0 e@396 ]
+"1516
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1516:     struct {
+[s S69 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S69 . RD WR WREN WRERR . EEPGD ]
+"1515
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1515: typedef union {
+[u S68 `S69 1 ]
+[n S68 . . ]
+"1525
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1525: extern volatile EECON1bits_t EECON1bits __attribute__((address(0x18C)));
+[v _EECON1bits `VS68 ~T0 @X0 0 e@396 ]
+"1482
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1482: extern volatile unsigned char EEDATA __attribute__((address(0x10C)));
+[v _EEDATA `Vuc ~T0 @X0 0 e@268 ]
+"79
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 79:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S6 . C DC Z nPD nTO RP IRP ]
+"88
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 88:     struct {
+[s S7 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S7 . . RP0 RP1 ]
+"93
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 93:     struct {
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . CARRY . ZERO ]
+"78
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 78: typedef union {
+[u S5 `S6 1 `S7 1 `S8 1 ]
+[n S5 . . . . ]
+"99
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 99: extern volatile STATUSbits_t STATUSbits __attribute__((address(0x003)));
+[v _STATUSbits `VS5 ~T0 @X0 0 e@3 ]
+"366
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 366:     struct {
+[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S18 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"376
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 376:     struct {
+[s S19 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S19 . . TMR0IF . TMR0IE ]
+"365
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 365: typedef union {
+[u S17 `S18 1 `S19 1 ]
+[n S17 . . . ]
+"383
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 383: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS17 ~T0 @X0 0 e@11 ]
+"1555
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1555: extern volatile unsigned char EECON2 __attribute__((address(0x18D)));
+[v _EECON2 `Vuc ~T0 @X0 0 e@397 ]
 "6 ./defines.h
 [p x FOSC  =  HS         ]
 "7
@@ -174,8 +215,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1557
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1557: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"48 ./defines.h
-[; ;./defines.h: 48: const char DIGITS[] = {
+"55 ./defines.h
+[; ;./defines.h: 55: const char DIGITS[] = {
 [v _DIGITS `Cuc ~T0 @X0 -> 6 `i e ]
 [i _DIGITS
 :U ..
@@ -187,8 +228,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 31 `i `uc
 ..
 ]
-"57
-[; ;./defines.h: 57: const char NUMBERS[] = {
+"64
+[; ;./defines.h: 64: const char NUMBERS[] = {
 [v _NUMBERS `Cuc ~T0 @X0 -> 10 `i e ]
 [i _NUMBERS
 :U ..
@@ -201,50 +242,140 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 250 `i `uc
 -> -> 14 `i `uc
 -> -> 254 `i `uc
--> -> 158 `i `uc
+-> -> 206 `i `uc
 ..
 ]
-"81
-[; ;./defines.h: 81: struct SCORE score;
+"92
+[; ;./defines.h: 92: struct SCORE score;
 [v _score `S71 ~T0 @X0 1 e ]
-"82
-[; ;./defines.h: 82: struct BUTTON button;
+"93
+[; ;./defines.h: 93: struct BUTTON button;
 [v _button `S70 ~T0 @X0 1 e ]
-"84
-[; ;./defines.h: 84: volatile unsigned int timers[2];
-[v _timers `Vui ~T0 @X0 -> 2 `i e ]
-[v $root$_isr `(v ~T0 @X0 0 e ]
-"3 interrupt.c
-[; ;interrupt.c: 3: void __attribute__((picinterrupt(("")))) isr() {
-[v _isr `(v ~T1 @X0 1 ef ]
+"94
+[; ;./defines.h: 94: char isSaveMemory;
+[v _isSaveMemory `uc ~T0 @X0 1 e ]
+"96
+[; ;./defines.h: 96: volatile unsigned int rxClocks;
+[v _rxClocks `Vui ~T0 @X0 1 e ]
+"97
+[; ;./defines.h: 97: volatile unsigned int timers[5];
+[v _timers `Vui ~T0 @X0 -> 5 `i e ]
+"3 memory.c
+[; ;memory.c: 3: void updateMemory(char addr, char value) {
+[v _updateMemory `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _isr ]
+[e :U _updateMemory ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _value `uc ~T0 @X0 1 r2 ]
 [f ]
 "4
-[; ;interrupt.c: 4:     if (PIR1bits.TMR1IF) {
-[e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 73  ]
-{
+[; ;memory.c: 4:     char mem = ( EEADR = addr, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+[v _mem `uc ~T0 @X0 1 a ]
+[e = _mem -> ; ; ; = _EEADR -> _addr `uc =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA `uc ]
 "5
-[; ;interrupt.c: 5:         PIR1bits.TMR1IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"6
-[; ;interrupt.c: 6:         if (timers[0]) timers[0]--;
-[e $ ! != *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 74  ]
-[e -- *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
-[e :U 74 ]
-"7
-[; ;interrupt.c: 7:         if (timers[1]) timers[1]--;
-[e $ ! != *U + &U _timers * -> -> -> 1 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 75  ]
-[e -- *U + &U _timers * -> -> -> 1 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
-[e :U 75 ]
-"8
-[; ;interrupt.c: 8:         TMR1 = 65535 - 3200;
-[e = _TMR1 -> - -> 65535 `l -> -> 3200 `i `l `us ]
-"9
-[; ;interrupt.c: 9:     }
-}
+[; ;memory.c: 5:     if (mem == value) return;
+[e $ ! == -> _mem `i -> _value `i 73  ]
+[e $UE 72  ]
 [e :U 73 ]
-"10
-[; ;interrupt.c: 10: }
+"6
+[; ;memory.c: 6:     do{ while (EECON1bits.WR) { continue; } EEADR = (addr); EEDATA = (value); EECON1 &= 0x3F; STATUSbits.CARRY = 0; if (INTCONbits.GIE) { STATUSbits.CARRY = 1; } INTCONbits.GIE = 0; EECON1bits.WREN = 1; EECON2 = 0x55; EECON2 = 0xAA; EECON1bits.WR = 1; EECON1bits.WREN = 0; if (STATUSbits.CARRY) { INTCONbits.GIE = 1; } } while (0);
+[e :U 76 ]
+{
+[e $U 77  ]
+[e :U 78 ]
+{
+[e $U 77  ]
+}
+[e :U 77 ]
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 78  ]
+[e :U 79 ]
+[e = _EEADR -> _addr `uc ]
+[e = _EEDATA -> _value `uc ]
+[e =& _EECON1 -> -> 63 `i `Vuc ]
+[e = . . _STATUSbits 2 0 -> -> 0 `i `uc ]
+[e $ ! != -> . . _INTCONbits 0 7 `i -> 0 `i 80  ]
+{
+[e = . . _STATUSbits 2 0 -> -> 1 `i `uc ]
+}
+[e :U 80 ]
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+[e = _EECON2 -> -> 85 `i `uc ]
+[e = _EECON2 -> -> 170 `i `uc ]
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+[e $ ! != -> . . _STATUSbits 2 0 `i -> 0 `i 81  ]
+{
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+}
+[e :U 81 ]
+}
+[e :U 75 ]
+"7
+[; ;memory.c: 7: }
 [e :UE 72 ]
+}
+"9
+[; ;memory.c: 9: void saveMemory(void) {
+[v _saveMemory `(v ~T0 @X0 1 ef ]
+{
+[e :U _saveMemory ]
+[f ]
+"10
+[; ;memory.c: 10:     updateMemory(0x00, (char) score.team1);
+[e ( _updateMemory (2 , -> -> 0 `i `uc -> . _score 0 `uc ]
+"11
+[; ;memory.c: 11:     updateMemory(0x01, (char) score.team2);
+[e ( _updateMemory (2 , -> -> 1 `i `uc -> . _score 1 `uc ]
+"12
+[; ;memory.c: 12:     updateMemory(0x02, score.win1);
+[e ( _updateMemory (2 , -> -> 2 `i `uc . _score 2 ]
+"13
+[; ;memory.c: 13:     updateMemory(0x03, score.win2);
+[e ( _updateMemory (2 , -> -> 3 `i `uc . _score 3 ]
+"14
+[; ;memory.c: 14: }
+[e :UE 82 ]
+}
+"16
+[; ;memory.c: 16: void loadMemory(void) {
+[v _loadMemory `(v ~T0 @X0 1 ef ]
+{
+[e :U _loadMemory ]
+[f ]
+"17
+[; ;memory.c: 17:     score.team1 = (signed char) ( EEADR = 0x00, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+[e = . _score 0 -> ; ; ; = _EEADR -> -> 0 `i `uc =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA `c ]
+"18
+[; ;memory.c: 18:     score.team2 = (signed char) ( EEADR = 0x01, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+[e = . _score 1 -> ; ; ; = _EEADR -> -> 1 `i `uc =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA `c ]
+"19
+[; ;memory.c: 19:     score.win1 = ( EEADR = 0x02, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+[e = . _score 2 -> ; ; ; = _EEADR -> -> 2 `i `uc =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA `uc ]
+"20
+[; ;memory.c: 20:     score.win2 = ( EEADR = 0x03, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+[e = . _score 3 -> ; ; ; = _EEADR -> -> 3 `i `uc =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA `uc ]
+"22
+[; ;memory.c: 22:     if (score.team1 == -1)score.team1 = 0;
+[e $ ! == -> . _score 0 `i -U -> 1 `i 84  ]
+[e = . _score 0 -> -> 0 `i `c ]
+[e :U 84 ]
+"23
+[; ;memory.c: 23:     if (score.team2 == -1)score.team1 = 0;
+[e $ ! == -> . _score 1 `i -U -> 1 `i 85  ]
+[e = . _score 0 -> -> 0 `i `c ]
+[e :U 85 ]
+"24
+[; ;memory.c: 24:     if (score.win1 == 0xff)score.win1 = 0;
+[e $ ! == -> . _score 2 `i -> 255 `i 86  ]
+[e = . _score 2 -> -> 0 `i `uc ]
+[e :U 86 ]
+"25
+[; ;memory.c: 25:     if (score.win2 == 0xff)score.win2 = 0;
+[e $ ! == -> . _score 3 `i -> 255 `i 87  ]
+[e = . _score 3 -> -> 0 `i `uc ]
+[e :U 87 ]
+"26
+[; ;memory.c: 26: }
+[e :UE 83 ]
 }

@@ -35,15 +35,21 @@
 
 #define BUTTON_STATUS_RELEASED 0
 #define BUTTON_STATUS_PRESSED 1
+#define BTN_NULL 0
 
+#define TIME_ZERO 0
 #define TIME_100ms 100
-#define TIME_10ms 10
+#define TIME_2ms 2
 #define TIME_300ms 300
+#define TIME_3s 3000
+#define TIME_5s 5000
 
 #define checkZero(x) !(x || x)
 
 struct BUTTON {
-    char status;
+    char status;   
+    char btn;
+    volatile unsigned int pressTime;
 };
 
 const char DIGITS[] = {
@@ -65,13 +71,15 @@ const char NUMBERS[] = {
     0b11111010,
     0b00001110,
     0b11111110,
-    0b10011110
+    0b11001110
 };
 
 void checkButtons(void);
 void updateDisplay(void);
 void up1(void);
 void up2(void);
+void saveMemory(void);
+void loadMemory(void);
 
 struct SCORE {
     signed char team1;
@@ -83,13 +91,16 @@ struct SCORE {
 
 struct SCORE score;
 struct BUTTON button;
+char isSaveMemory;
 
 volatile unsigned int rxClocks;
-volatile unsigned int timers[3];
+volatile unsigned int timers[5];
 
 #define tmDISPLAY timers[0]
 #define tmBUTTON timers[1]
 #define tmCLOCK timers[2]
+#define tmWAIT_NEXT_RX timers[3]
+#define tmMEMORY timers[4]
 
 #endif
 

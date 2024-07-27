@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"76 ./defines.h
-[; ;./defines.h: 76: struct SCORE {
+"84 ./defines.h
+[; ;./defines.h: 84: struct SCORE {
 [s S71 `c 1 `c 1 `uc 1 `uc 1 `uc 1 ]
 [n S71 SCORE team1 team2 win1 win2 digit ]
-"45
-[; ;./defines.h: 45: struct BUTTON {
-[s S70 `uc 1 ]
-[n S70 BUTTON status ]
+"49
+[; ;./defines.h: 49: struct BUTTON {
+[s S70 `uc 1 `uc 1 `Vui 1 ]
+[n S70 BUTTON status btn pressTime ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
 "366 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h
@@ -200,8 +200,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1557
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f870.h: 1557: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"49 ./defines.h
-[; ;./defines.h: 49: const char DIGITS[] = {
+"55 ./defines.h
+[; ;./defines.h: 55: const char DIGITS[] = {
 [v _DIGITS `Cuc ~T0 @X0 -> 6 `i e ]
 [i _DIGITS
 :U ..
@@ -213,8 +213,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 31 `i `uc
 ..
 ]
-"58
-[; ;./defines.h: 58: const char NUMBERS[] = {
+"64
+[; ;./defines.h: 64: const char NUMBERS[] = {
 [v _NUMBERS `Cuc ~T0 @X0 -> 10 `i e ]
 [i _NUMBERS
 :U ..
@@ -227,21 +227,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 250 `i `uc
 -> -> 14 `i `uc
 -> -> 254 `i `uc
--> -> 158 `i `uc
+-> -> 206 `i `uc
 ..
 ]
-"84
-[; ;./defines.h: 84: struct SCORE score;
+"92
+[; ;./defines.h: 92: struct SCORE score;
 [v _score `S71 ~T0 @X0 1 e ]
-"85
-[; ;./defines.h: 85: struct BUTTON button;
+"93
+[; ;./defines.h: 93: struct BUTTON button;
 [v _button `S70 ~T0 @X0 1 e ]
-"87
-[; ;./defines.h: 87: volatile unsigned int rxClocks;
+"94
+[; ;./defines.h: 94: char isSaveMemory;
+[v _isSaveMemory `uc ~T0 @X0 1 e ]
+"96
+[; ;./defines.h: 96: volatile unsigned int rxClocks;
 [v _rxClocks `Vui ~T0 @X0 1 e ]
-"88
-[; ;./defines.h: 88: volatile unsigned int timers[3];
-[v _timers `Vui ~T0 @X0 -> 3 `i e ]
+"97
+[; ;./defines.h: 97: volatile unsigned int timers[5];
+[v _timers `Vui ~T0 @X0 -> 5 `i e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "3 interrupt.c
 [; ;interrupt.c: 3: void __attribute__((picinterrupt(("")))) isr() {
@@ -260,45 +263,70 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;interrupt.c: 6:         timers[2] = 300;
 [e = *U + &U _timers * -> -> -> 2 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 300 `i `ui ]
 "7
-[; ;interrupt.c: 7:         rxClocks++;
-[e ++ _rxClocks -> -> 1 `i `Vui ]
-"8
-[; ;interrupt.c: 8:         PORTCbits.RC7 = 1;
-[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
-"9
-[; ;interrupt.c: 9:     } else if (PIR1bits.TMR1IF) {
-}
-[e $U 74  ]
-[e :U 73 ]
-[e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 75  ]
+[; ;interrupt.c: 7:         if (timers[3] == 0) {
+[e $ ! == *U + &U _timers * -> -> -> 3 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 74  ]
 {
+"8
+[; ;interrupt.c: 8:             rxClocks++;
+[e ++ _rxClocks -> -> 1 `i `Vui ]
+"9
+[; ;interrupt.c: 9:             PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
 "10
-[; ;interrupt.c: 10:         PIR1bits.TMR1IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"11
-[; ;interrupt.c: 11:         if (timers[0]) timers[0]--;
-[e $ ! != *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 76  ]
-[e -- *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
-[e :U 76 ]
-"12
-[; ;interrupt.c: 12:         if (timers[1]) timers[1]--;
-[e $ ! != *U + &U _timers * -> -> -> 1 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 77  ]
-[e -- *U + &U _timers * -> -> -> 1 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
-[e :U 77 ]
-"13
-[; ;interrupt.c: 13:         if (timers[2]) timers[2]--;
-[e $ ! != *U + &U _timers * -> -> -> 2 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 78  ]
-[e -- *U + &U _timers * -> -> -> 2 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
-[e :U 78 ]
-"14
-[; ;interrupt.c: 14:         TMR1 = 65535 - 3200;
-[e = _TMR1 -> - -> 65535 `l -> -> 3200 `i `l `us ]
-"15
-[; ;interrupt.c: 15:     }
+[; ;interrupt.c: 10:         }
 }
-[e :U 75 ]
 [e :U 74 ]
+"11
+[; ;interrupt.c: 11:     } else if (PIR1bits.TMR1IF) {
+}
+[e $U 75  ]
+[e :U 73 ]
+[e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 76  ]
+{
+"12
+[; ;interrupt.c: 12:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"13
+[; ;interrupt.c: 13:         if (timers[0]) timers[0]--;
+[e $ ! != *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 77  ]
+[e -- *U + &U _timers * -> -> -> 0 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
+[e :U 77 ]
+"14
+[; ;interrupt.c: 14:         if (timers[1]) timers[1]--;
+[e $ ! != *U + &U _timers * -> -> -> 1 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 78  ]
+[e -- *U + &U _timers * -> -> -> 1 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
+[e :U 78 ]
+"15
+[; ;interrupt.c: 15:         if (timers[2]) timers[2]--;
+[e $ ! != *U + &U _timers * -> -> -> 2 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 79  ]
+[e -- *U + &U _timers * -> -> -> 2 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
+[e :U 79 ]
 "16
-[; ;interrupt.c: 16: }
+[; ;interrupt.c: 16:         if (timers[3]) timers[3]--;
+[e $ ! != *U + &U _timers * -> -> -> 3 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 80  ]
+[e -- *U + &U _timers * -> -> -> 3 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
+[e :U 80 ]
+"17
+[; ;interrupt.c: 17:         if (timers[4]) timers[4]--;
+[e $ ! != *U + &U _timers * -> -> -> 4 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 0 `i `ui 81  ]
+[e -- *U + &U _timers * -> -> -> 4 `i `ui `ux -> -> # *U &U _timers `ui `ux -> -> 1 `i `ui ]
+[e :U 81 ]
+"18
+[; ;interrupt.c: 18:         TMR1 = 65535 - 3200;
+[e = _TMR1 -> - -> 65535 `l -> -> 3200 `i `l `us ]
+"20
+[; ;interrupt.c: 20:         if (button.status == 1)
+[e $ ! == -> . _button 0 `i -> 1 `i 82  ]
+"21
+[; ;interrupt.c: 21:             button.pressTime++;
+[e ++ . _button 2 -> -> 1 `i `Vui ]
+[e :U 82 ]
+"22
+[; ;interrupt.c: 22:     }
+}
+[e :U 76 ]
+[e :U 75 ]
+"23
+[; ;interrupt.c: 23: }
 [e :UE 72 ]
 }

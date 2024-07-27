@@ -30,6 +30,12 @@ void main(void) {
     setup();
 
     __delay_ms(500);
+    
+    score.team1 = 0;
+    score.team2 = 0;
+    
+    loadMemory();
+    isSaveMemory = 0;
 
     while (1) {
         checkButtons();
@@ -39,6 +45,12 @@ void main(void) {
             if (rxClocks > 200) up2();
             else up1();
             rxClocks = 0;
+            tmWAIT_NEXT_RX = TIME_3s;
+        }
+        
+        if(isSaveMemory && tmMEMORY == 0){
+            isSaveMemory = 0;
+            saveMemory();
         }
     }
 }
